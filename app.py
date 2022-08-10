@@ -13,20 +13,16 @@ def db_create():
 
     engine.connect()
     engine.execute("""
-        CREATE TABLE IF NOT EXISTS area(
-            주택명 TEXT,
-            주택상세구분명 TEXT,
-            공급위치 TEXT,
-            모집공고일 TEXT,
-            청약접수시작일 TEXT,
-            청약접수종료일 TEXT,
-            당첨자발표일 TEXT,
-            홈페이지주소 TEXT
+        CREATE TABLE IF NOT EXISTS score(
+            가점항목 TEXT,
+            가점구분 TEXT,
+            점수 INT,
+            입력값 INT
         );"""
     )
-    data = pd.read_csv('data/area.csv')
+    data = pd.read_csv('data/score.csv')
     print(data)
-    data.to_sql(name='area', con=engine, schema = 'public', if_exists='replace', index=False)
+    data.to_sql(name='score', con=engine, schema = 'public', if_exists='replace', index=False)
 
 app = Flask(__name__)
 
