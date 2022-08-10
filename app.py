@@ -16,8 +16,8 @@ def db_create():
         CREATE TABLE IF NOT EXISTS score(
             가점항목 TEXT,
             가점구분 TEXT,
-            점수 INT,
-            입력값 INT
+            점수 BIGINT,
+            입력값 BIGINT
         );"""
     )
     data = pd.read_csv('data/score.csv')
