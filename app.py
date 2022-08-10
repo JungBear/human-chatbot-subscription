@@ -14,14 +14,14 @@ def db_create():
     engine.connect()
     engine.execute("""
         CREATE TABLE IF NOT EXISTS area(
-            주택명 text,
-            주택상세구분명 text,
-            공급위치 text,
-            모집공고일 text,
-            청약접수시작일 text,
-            청약접수종료일 text,
-            당첨자발표일 text,
-            홈페이지주소 text
+            주택명 TEXT,
+            주택상세구분명 TEXT,
+            공급위치 TEXT,
+            모집공고일 TEXT,
+            청약접수시작일 TEXT,
+            청약접수종료일 TEXT,
+            당첨자발표일 TEXT,
+            홈페이지주소 TEXT
         );"""
     )
     data = pd.read_csv('data/area.csv')
