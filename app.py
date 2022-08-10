@@ -24,7 +24,7 @@ def db_create():
             홈페이지주소 TEXT
         );"""
     )
-    data = pd.read_csv('data/score.csv')
+    data = pd.read_csv('data/area.csv')
     print(data)
     data.to_sql(name='announcement', con=engine, schema = 'public', if_exists='replace', index=False)
 
