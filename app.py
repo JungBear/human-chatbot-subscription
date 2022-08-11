@@ -2,7 +2,15 @@
 from flask import Flask
 import pandas as pd 
 from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String
+import os
+import psycopg2
 
+def announcement():
+    DATABASE_URL = os.environ['postgresql://xnrniyjhurkuos:b0d752cc9e29106fb8c4b1f7cd39c985a5a23bb67a35d8c365a6175355e9bf13@ec2-50-19-255-190.compute-1.amazonaws.com:5432/dashvvhprslttt']
+    conn = psycopg2.connect(DATABASE_URL, sslmode = 'require')
+
+
+'''
 ## DB 연결 Local
 def db_create():
     # 로컬
@@ -25,18 +33,18 @@ def db_create():
         );"""
     )
     data = pd.read_csv('data/area.csv')
-    print(data)
+    #print(data)
     data.to_sql(name='announcement', con=engine, schema = 'public', if_exists='replace', index=False)
-
+'''
 app = Flask(__name__)
 
 @app.route("/")
 def index():
-    db_create()
+    #db_create()
     return "Hello World!!!!!!!"
 
 
 
 if __name__ == "__main__":
-    db_create()
+    #db_create()
     app.run(port=5000)
