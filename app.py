@@ -37,6 +37,9 @@ def db_create():
 '''
 
 app = Flask(__name__)
+@app.route("/")
+def hello():
+    return 'hello world!!'
 
 @app.route("/ann", methods = ['post'])
 def announcement_input():
