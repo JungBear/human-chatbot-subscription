@@ -1,0 +1,53 @@
+{
+    "bot":{
+       "id":"62f6011efb4d7520b2bbb3b2!",
+       "name":"test"
+    },
+    "intent":{
+       "id":"62fb3ed478a1fc2ba5b28026",
+       "name":"단순입력",
+       "extra":{
+          "reason":{
+             "code":1,
+             "message":"OK"
+          }
+       }
+    },
+    "action":{
+       "id":"62fb3eabf534cf44c78edae1",
+       "name":"단순텍스트",
+       "params":{
+          
+       },
+       "detailParams":{
+          
+       },
+       "clientExtra":{
+          
+       }
+    },
+    "userRequest":{
+       "block":{
+          "id":"62fb3ed478a1fc2ba5b28026",
+          "name":"단순입력"
+       },
+       "user":{
+          "id":"98cdbfd26402714be6078c17626efbcaeedb60c6b637f6f6fdb17163a16b4e4be2",
+          "type":"botUserKey",
+          "properties":{
+             "botUserKey":"98cdbfd26402714be6078c17626efbcaeedb60c6b637f6f6fdb17163a16b4e4be2",
+             "bot_user_key":"98cdbfd26402714be6078c17626efbcaeedb60c6b637f6f6fdb17163a16b4e4be2"
+          }
+       },
+       "utterance":"안녕\n",
+       "params":{
+          "surface":"BuilderBotTest",
+          "ignoreMe":"true"
+       },
+       "lang":"kr",
+       "timezone":"Asia/Seoul"
+    },
+    "contexts":[
+       
+    ]
+ }

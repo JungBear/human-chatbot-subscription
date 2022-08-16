@@ -7,56 +7,28 @@ from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String
 import psycopg2
 from announcement import input_region
 
-
-from flask import Flask, request
 app = Flask(__name__)
 
-@app.route('/')
-def hello_world():
-    return 'Hello, World!'
+@app.route("/")
+def hello():
+    return "hellllllll123"
 
-## 카카오톡 텍스트형 응답
-@app.route('/api/sayHello', methods=['POST'])
-def sayHello():
+@app.route("/anninputloc", methods=["post"])
+def announcement_input():  
     body = request.get_json()
     print(body)
     print(body['userRequest']['utterance'])
-
-    responseBody = {
-        "version": "2.0",
+    response = {
+        "version" : "2.0",
         "template": {
-            "outputs": [
+            "outputs" : [
                 {
-                    "simpleText": {
-                        "text": "안녕 hello I'm Ryan"
+                    'simpleText':{
+                        "text": "지역을 입력해주세요\n(예시: 평택시 -> 평택)"
                     }
                 }
             ]
         }
     }
+    return jsonify(response)
 
-    return responseBody
-
-
-## 카카오톡 이미지형 응답
-@app.route('/api/showHello', methods=['POST'])
-def showHello():
-    body = request.get_json()
-    print(body)
-    print(body['userRequest']['utterance'])
-
-    responseBody = {
-        "version": "2.0",
-        "template": {
-            "outputs": [
-                {
-                    "simpleImage": {
-                        "imageUrl": "https://t1.daumcdn.net/friends/prod/category/M001_friends_ryan2.jpg",
-                        "altText": "hello I'm Ryan"
-                    }
-                }
-            ]
-        }
-    }
-
-    return responseBody
