@@ -137,4 +137,4 @@ def announcement_output():
 
 if __name__ == "__main__":
     #db_create()
-    app.run(debug=True)
+    app.run(port=5000,debug=True)
