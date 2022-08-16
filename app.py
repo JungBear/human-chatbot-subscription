@@ -44,10 +44,11 @@ def hello():
 
 @app.route("/anninputloc", methods=["post"])
 def announcement_input():  
+
     response = {
         "version" : "2.0",
         "template": {
-            "output" : [
+            "outputs" : [
                 {
                     'simpleText':{
                         "text": "지역을 입력해주세요\n(예시: 평택시 -> 평택)"
