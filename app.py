@@ -5,7 +5,7 @@ import os,sys, json
 import pandas as pd 
 from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String
 import psycopg2
-from announcement import df, input_region, region
+from announcement import df, input_region
 
 
 
@@ -40,12 +40,10 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return 'hello world133244'
+    return "hellllllll123"
 
-@app.route("/ann_input", methods=["post"])
-def announcement_input():
-    request_data = json.loads()
-    
+@app.route("/anninputloc", methods=["post"])
+def announcement_input():  
     response = {
         "version" : "2.0",
         "template": {
@@ -66,4 +64,4 @@ def announcement_input():
 
 if __name__ == "__main__":
     #db_create()
-    app.run(host='0.0.0.0',debug=True)
+    app.run(host='0.0.0.0', port=int(sys.argv[1]), debug=True)
