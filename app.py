@@ -37,9 +37,10 @@ def db_create():
 '''
 
 app = Flask(__name__)
+
 @app.route("/")
 def hello():
-    return 'hello world!!!!!'
+    return 'hello world!!!!!!@12311!!'
 
 @app.route("/ann_input", methods = ["post"])
 def announcement_input():
@@ -136,4 +137,4 @@ def announcement_output():
 
 if __name__ == "__main__":
     #db_create()
-    app.run(port = 5000, debug=True)
+    app.run(debug=True)
