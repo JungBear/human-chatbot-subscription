@@ -50,7 +50,7 @@ def announcement_input():
             "output" : [
                 {
                     'simpleText':{
-                        "test": "지역을 입력해주세요\n(예시: 평택시 -> 평택)"
+                        "text": "지역을 입력해주세요\n(예시: 평택시 -> 평택)"
                     }
                 }
             ]
