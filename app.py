@@ -39,7 +39,7 @@ def db_create():
 app = Flask(__name__)
 @app.route("/")
 def hello():
-    return 'hello world!!'
+    return 'hello world!!!!!'
 
 @app.route("/ann_input", methods = ["post"])
 def announcement_input():
@@ -59,7 +59,7 @@ def announcement_input():
     }
     return jsonify(response)
 
-@app.route('/ann_output', method=["post"])
+@app.route('/ann_output', methods=["post"])
 def announcement_output():
     # 카카오톡 서버에서 스킬이 보내는 요청의 데이터
     request_data = json.loads(request.get_data(), encoding = 'utf-8')
@@ -79,11 +79,11 @@ def announcement_output():
                 {
                     "listCard": {
                         "header": {
-                            "title": "공고 입니다.."
+                            "title": "공고 입니다."
                         },
                         "items": [
                             {
-                                "title": "챗봇 관리자센터",
+                                "title": df[['Name']],
                                 "description": "새로운 AI의 내일과 일상의 변화",
                                 "imageUrl": "http://k.kakaocdn.net/dn/APR96/btqqH7zLanY/kD5mIPX7TdD2NAxgP29cC0/1x1.jpg",
                                 "link": {
