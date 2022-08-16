@@ -4,8 +4,8 @@
        "name":"test"
     },
     "intent":{
-       "id":"62fb3ed478a1fc2ba5b28026",
-       "name":"단순입력",
+       "id":"62faebe1f534cf44c78ed11b",
+       "name":"공고입력",
        "extra":{
           "reason":{
              "code":1,
@@ -14,8 +14,8 @@
        }
     },
     "action":{
-       "id":"62fb3eabf534cf44c78edae1",
-       "name":"단순텍스트",
+       "id":"62faebc2fb4d7520b2bbd07b",
+       "name":"공고입력",
        "params":{
           
        },
@@ -28,8 +28,8 @@
     },
     "userRequest":{
        "block":{
-          "id":"62fb3ed478a1fc2ba5b28026",
-          "name":"단순입력"
+          "id":"62faebe1f534cf44c78ed11b",
+          "name":"공고입력"
        },
        "user":{
           "id":"98cdbfd26402714be6078c17626efbcaeedb60c6b637f6f6fdb17163a16b4e4be2",
@@ -39,7 +39,7 @@
              "bot_user_key":"98cdbfd26402714be6078c17626efbcaeedb60c6b637f6f6fdb17163a16b4e4be2"
           }
        },
-       "utterance":"안녕\n",
+       "utterance":"공고\n",
        "params":{
           "surface":"BuilderBotTest",
           "ignoreMe":"true"
