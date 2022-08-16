@@ -31,7 +31,7 @@ def db_select(loc):
     cur = conn.cursor()
     # cursor = 임시 객체생성
     # 생성된 임시객체를 cur에 저장
-    cur.execute("select * from public.announcement;")
+    cur.execute("select * from announcement;")
     # sql문장을 실행할 수 있게 해주는 메서드
     rows = cur.fetchall() 
     # 데이터내용 전부 불러서 rows에 입력
@@ -51,7 +51,7 @@ def index():
 
 
 if __name__ == "__main__":
-    db_create()
-    # db_select()
+    #db_create()
+    db_select()
  
     app.run()
