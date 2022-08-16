@@ -40,7 +40,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return 'hello world!!!!!!@12311!!'
+    return 'hello world!!!!!'
 
 @app.route("/ann_input", methods = ["post"])
 def announcement_input():
