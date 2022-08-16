@@ -59,6 +59,77 @@ def announcement_input():
     }
     return jsonify(response)
 
+@app.route('/outputann', methods=["post"])
+def announcement_output():
+    # 카카오톡 서버에서 스킬이 보내는 요청의 데이터
+    request_data = json.loads(request.get_data(), encoding = 'utf-8')
+    print(request_data)
+    # 파라미터에서 지역파라미터의 값 가져오기(문자열로 되어있어 별도로 json으로 변환)
+    params = request_data['action']['params']
+    param_loc = json.loads(params['loc'])
+    
+    print(param_loc) 
+    loc_input = input_region(param_loc)
+
+    print(input_region)
+    response = {
+        "version": "2.0",
+        "template": {
+           "outputs": [
+                {
+                    "listCard": {
+                        "header": {
+                            "title": "공고 입니다."
+                        },
+                        "items": [
+                            {
+                                "title": df[['Name']],
+                                "description": "새로운 AI의 내일과 일상의 변화",
+                                "imageUrl": "http://k.kakaocdn.net/dn/APR96/btqqH7zLanY/kD5mIPX7TdD2NAxgP29cC0/1x1.jpg",
+                                "link": {
+                                    "web": df[['Rink']]
+                                }
+                            },
+                            {
+                                "title": "챗봇 관리자센터",
+                                "description": "카카오톡 채널 챗봇 만들기",
+                                "imageUrl": "http://k.kakaocdn.net/dn/N4Epz/btqqHCfF5II/a3kMRckYml1NLPEo7nqTmK/1x1.jpg",
+                                "action": "block",
+                                "blockId": "62654c249ac8ed78441532de",
+                                "extra": {
+                                    "key1": "value1",
+                                    "key2": "value2"
+                                }
+                            },
+                            {
+                                "title": "Kakao i Voice Service",
+                                "description": "보이스봇 / KVS 제휴 신청하기",
+                                "imageUrl": "http://k.kakaocdn.net/dn/bE8AKO/btqqFHI6vDQ/mWZGNbLIOlTv3oVF1gzXKK/1x1.jpg",
+                                "action": "message",
+                                "messageText": "Kakao i Voice Service",
+                                "extra": {
+                                    "key1": "value1",
+                                    "key2": "value2"
+                                }
+                            }
+                        ],
+                        "buttons": [
+                            {
+                                "label": "구경가기",
+                                "action": "block",
+                                "blockId": "62654c249ac8ed78441532de",
+                                "extra": {
+                                    "key1": "value1",
+                                    "key2": "value2"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+    return jsonify(response)
 
 
 
