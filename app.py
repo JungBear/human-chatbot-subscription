@@ -42,7 +42,7 @@ app = Flask(__name__)
 def hello():
     return 'hello world!!!!!'
 
-@app.route("/ann_input", methods = ["post"])
+@app.route("/ann_input", methods=["post"])
 def announcement_input():
     request_data = json.loads()
     
@@ -137,4 +137,4 @@ def announcement_output():
 
 if __name__ == "__main__":
     #db_create()
-    app.run(port=5000,debug=True)
+    app.run(host='0.0.0.0',debug=True)
