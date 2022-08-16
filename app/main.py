@@ -13,7 +13,7 @@ app = Flask(__name__)
 def hello():
     return "hellllllll123"
 
-@app.route("/anninputloc", methods=["post"])
+@app.route("/api/anninputloc", methods=["post"])
 def announcement_input():  
     body = request.get_json()
     print(body)
