@@ -66,7 +66,7 @@ def announcement_output():
     print(request_data)
     # 파라미터에서 지역파라미터의 값 가져오기(문자열로 되어있어 별도로 json으로 변환)
     params = request_data['action']['params']
-    param_loc = json.loads(params['sys_loc'])
+    param_loc = json.loads(params['loc'])
     
     print(param_loc) 
     loc_input = input_region(param_loc)
