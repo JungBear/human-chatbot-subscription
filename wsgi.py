@@ -1,5 +1,4 @@
-from app.main import app
-from start import db_create
+from app.main import app, db_create
 
 if __name__ == "__main__":
     db_create()
