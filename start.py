@@ -10,14 +10,14 @@ engine.connect()
 def db_create():
     engine.execute("""
         CREATE TABLE IF NOT EXISTS announcement(
-            Name TEXT,
-            Division TEXT,
-            Location TEXT,
-            Notice_date TEXT,
-            Start_day TEXT,
-            End_day TEXT,
+            name TEXT,
+            division TEXT,
+            location TEXT,
+            notice_date TEXT,
+            start_day TEXT,
+            end_day TEXT,
             release_date TEXT,
-            Rink TEXT
+            rink TEXT
         );"""
     )
     data = pd.read_csv('data/area.csv')
