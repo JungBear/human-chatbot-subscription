@@ -4,8 +4,8 @@
        "name":"test"
     },
     "intent":{
-       "id":"62faebe1f534cf44c78ed11b",
-       "name":"공고입력",
+       "id":"62faf72c70055f434dcd2513",
+       "name":"공고��력",
        "extra":{
           "reason":{
              "code":1,
@@ -14,13 +14,17 @@
        }
     },
     "action":{
-       "id":"62faebc2fb4d7520b2bbd07b",
-       "name":"공고입력",
+       "id":"62faf7cc70055f434dcd251e",
+       "name":"공고출력",
        "params":{
-          
+          "loc":"평택"
        },
        "detailParams":{
-          
+          "loc":{
+             "groupName":"",
+             "origin":"평택",
+             "value":"평택"
+          }
        },
        "clientExtra":{
           
@@ -28,8 +32,8 @@
     },
     "userRequest":{
        "block":{
-          "id":"62faebe1f534cf44c78ed11b",
-          "name":"공고입력"
+          "id":"62faf72c70055f434dcd2513",
+          "name":"공고출력"
        },
        "user":{
           "id":"98cdbfd26402714be6078c17626efbcaeedb60c6b637f6f6fdb17163a16b4e4be2",
@@ -39,7 +43,7 @@
              "bot_user_key":"98cdbfd26402714be6078c17626efbcaeedb60c6b637f6f6fdb17163a16b4e4be2"
           }
        },
-       "utterance":"공고\n",
+       "utterance":"평택\n",
        "params":{
           "surface":"BuilderBotTest",
           "ignoreMe":"true"

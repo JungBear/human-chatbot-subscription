@@ -7,6 +7,27 @@ from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String
 import psycopg2
 import start
 
+engine = create_engine("postgresql://xnrniyjhurkuos:b0d752cc9e29106fb8c4b1f7cd39c985a5a23bb67a35d8c365a6175355e9bf13@ec2-50-19-255-190.compute-1.amazonaws.com:5432/dashvvhprslttt", echo = False)
+
+engine.connect()
+
+def db_create():
+    engine.execute("""
+        CREATE TABLE IF NOT EXISTS announcement(
+            Name TEXT NOT NULL,
+            Division TEXT NOT NULL,
+            Location TEXT NOT NULL,
+            Notice_date TEXT NOT NULL,
+            Start_day TEXT NOT NULL,
+            End_day TEXT NOT NULL,
+            release_date TEXT NOT NULL,
+            Rink TEXT NOT NULL
+        );"""
+    )
+    data = pd.read_csv('data/area.csv')
+    print(data)
+    data.to_sql(name='announcement', con=engine, schema = 'public', if_exists='replace', index=False)
+    return data
 
 app = Flask(__name__)
 
@@ -68,7 +89,7 @@ def location():
     print(loc)
     print(type(loc))
 
-    loc_li="\'%%" + loc + "%%\'"
+    loc_li="\'" + loc + "\'"
     df1=start.db_select(loc)
     print(df1)
     name=df1['Name']
