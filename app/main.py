@@ -11,29 +11,12 @@ engine = create_engine("postgresql://xnrniyjhurkuos:b0d752cc9e29106fb8c4b1f7cd39
 
 engine.connect()
 
-def db_create():
-    engine.execute("""
-        CREATE TABLE IF NOT EXISTS announcement(
-            name TEXT,
-            division TEXT,
-            location TEXT,
-            notice_date TEXT,
-            start_day TEXT,
-            end_day TEXT,
-            release_date TEXT,
-            rink TEXT
-        );"""
-    )
-    data = pd.read_csv('data/area.csv')
-    print(data)
-    data.to_sql(name='announcement', con=engine, schema = 'public', if_exists='replace', index=False)
-
 
 app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "49"
+    return "50"
 
 # 사용자가 공고를 보기 원할 때 
 @app.route("/api/anninputloc", methods=["post"])
