@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "44"
+    return "46"
 
 # 사용자가 공고를 보기 원할 때 
 @app.route("/api/anninputloc", methods=["post"])
@@ -84,7 +84,7 @@ def location():
                         },
                         "items": [
                             {
-                                "title": '123',
+                                "title": name,
                                 "description": "새로운 AI의 내일과 일상의 변화",
                                 "imageUrl": "http://k.kakaocdn.net/dn/APR96/btqqH7zLanY/kD5mIPX7TdD2NAxgP29cC0/1x1.jpg",
                                 "link": {
