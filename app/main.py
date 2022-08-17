@@ -71,7 +71,7 @@ def location():
     loc_li="'%" + loc + "%'"
     df1=start.db_select(loc_li)
     print(df1)
-    name=df1['Name']
+    name=df1['name']
     print(name)
     print(type(name))
     responseBody = {
