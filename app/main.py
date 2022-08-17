@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "56"
+    return "57"
 
 # 사용자가 공고를 보기 원할 때 
 @app.route("/api/anninputloc", methods=["post"])
@@ -85,7 +85,7 @@ def location():
                         },
                         "items": [
                             {
-                                "title": '123',
+                                "title": name[0],
                                 "description": "새로운 AI의 내일과 일상의 변화",
                                 "imageUrl": "http://k.kakaocdn.net/dn/APR96/btqqH7zLanY/kD5mIPX7TdD2NAxgP29cC0/1x1.jpg",
                                 "link": {
@@ -93,7 +93,7 @@ def location():
                                 }
                             },
                             {
-                                "title": '123',
+                                "title": name[1],
                                 "description": "카카오톡 채널 챗봇 만들기",
                                 "imageUrl": "http://k.kakaocdn.net/dn/N4Epz/btqqHCfF5II/a3kMRckYml1NLPEo7nqTmK/1x1.jpg",
                                 "action": "block",
@@ -104,7 +104,7 @@ def location():
                                 }
                             },
                             {
-                                "title": '123',
+                                "title": name[2],
                                 "description": "보이스봇 / KVS 제휴 신청하기",
                                 "imageUrl": "http://k.kakaocdn.net/dn/bE8AKO/btqqFHI6vDQ/mWZGNbLIOlTv3oVF1gzXKK/1x1.jpg",
                                 "action": "message",
