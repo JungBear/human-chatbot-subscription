@@ -33,13 +33,14 @@ def db_select(loc):
     # cursor = 임시 객체생성
     # 생성된 임시객체를 cur에 저장
     #loc = "\'평택'"
-    cur.execute(("SELECT * FROM announcement WHERE Location LIKE %{}%;").format(loc))
+    sql = "SELECT * FROM announcement WHERE Location LIKE %s;"
+    cur.execute(sql, loc)
     # sql문장을 실행할 수 있게 해주는 메서드
     rows = cur.fetchall() 
     # 데이터내용 전부 불러서 rows에 입력
     # list 타입
     df = pd.DataFrame(rows, columns = ['Name','Division','Location','Notice_date','Start_day','End_day','release_date','Rink'])
-    print(df)
+    #print(df)
     # DataFrame으로 만들어주기
     # 컬럼명을 지정
     return df
