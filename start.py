@@ -33,9 +33,10 @@ def db_select(loc):
     # cursor = 임시 객체생성
     # 생성된 임시객체를 cur에 저장
     #loc = "\'평택'"
-    sql = "SELECT * FROM announcement WHERE Location LIKE %s;"
+    # sql = "SELECT * FROM announcement WHERE Location LIKE %s;"
     cur.execute("SELECT * FROM public.announcement WHERE 'Location' LIKE {};".format(loc))
     # sql문장을 실행할 수 있게 해주는 메서드
+    # Location 컬럼에 loc가 포함되는 행 출력해주는 쿼리
     rows = cur.fetchall() 
     # 데이터내용 전부 불러서 rows에 입력
     # list 타입
