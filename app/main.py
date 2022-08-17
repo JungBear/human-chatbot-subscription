@@ -33,7 +33,7 @@ app = Flask(__name__)
 @app.route("/")
 def hello():
     db_create()
-    return "V62"
+    return "V63"
 
 # 사용자가 공고를 보기 원할 때 
 @app.route("/api/anninputloc", methods=["post"])
