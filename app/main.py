@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "helll123123123lll1231ll123"
+    return "helll!!!"
 
 # 사용자가 공고를 보기 원할 때 
 @app.route("/api/anninputloc", methods=["post"])
@@ -67,8 +67,8 @@ def location():
     print(loc)
     print(type(loc))
 
-    loc_li="\'" + loc + "\'"
-    df1=start.db_select(loc)
+    loc_li="\%%'" + loc + "%%\'"
+    df1=start.db_select(loc_li)
     print(df1)
     name=df1['Name']
     print(name)
