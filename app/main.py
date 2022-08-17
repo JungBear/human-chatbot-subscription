@@ -18,8 +18,8 @@ def db_create():
         CREATE TABLE IF NOT EXISTS score(
             name TEXT,
             division TEXT,
-            score TEXT,
-            input TEXT,
+            score bigint,
+            input bigint,
         );"""
     )
     data = pd.read_csv('data/score.csv')
@@ -33,7 +33,7 @@ app = Flask(__name__)
 @app.route("/")
 def hello():
     db_create()
-    return "V63"
+    return "V64"
 
 # 사용자가 공고를 보기 원할 때 
 @app.route("/api/anninputloc", methods=["post"])
