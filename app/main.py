@@ -67,7 +67,7 @@ def location():
     print(loc)
     print(type(loc))
 
-    loc_li="\%%'" + loc + "%%\'"
+    loc_li="%'" + loc + "%'"
     df1=start.db_select(loc_li)
     print(df1)
     name=df1['Name']
