@@ -8,32 +8,11 @@ import psycopg2
 import start
 
 
-
-def db_create():
-    engine = create_engine("postgresql://xnrniyjhurkuos:b0d752cc9e29106fb8c4b1f7cd39c985a5a23bb67a35d8c365a6175355e9bf13@ec2-50-19-255-190.compute-1.amazonaws.com:5432/dashvvhprslttt", echo = False)
-
-    engine.connect()
-
-    engine.execute("""
-        CREATE TABLE IF NOT EXISTS score(
-            name TEXT,
-            division TEXT,
-            score bigint,
-            input bigint,
-        );"""
-    )
-    data = pd.read_csv('data/score.csv')
-    print(data)
-    data.to_sql(name='score', con=engine, schema = 'public', if_exists='replace', index=False)
-
-
-
 app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    db_create()
-    return "V64"
+    return "V65"
 
 # 사용자가 공고를 보기 원할 때 
 @app.route("/api/anninputloc", methods=["post"])
