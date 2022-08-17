@@ -9,7 +9,7 @@ engine.connect()
 
 def db_create():
     engine.execute("""
-        CREATE TABLE IF NOT EXISTS announcement(
+        CREATE TABLE IF NOT EXISTS area(
             name TEXT,
             division TEXT,
             location TEXT,
@@ -22,7 +22,7 @@ def db_create():
     )
     data = pd.read_csv('data/area.csv')
     print(data)
-    data.to_sql(name='announcement', con=engine, schema = 'public', if_exists='replace', index=False)
+    data.to_sql(name='area', con=engine, schema = 'public', if_exists='replace', index=False)
 
 
 
