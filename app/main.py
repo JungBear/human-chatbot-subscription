@@ -59,22 +59,29 @@ def sayHello():
 # 지역입력 시 공고 출력
 @app.route('/api/annout', methods=['POST'])
 def location():
+    
     body = request.get_json()
-    #print(body)
+    print(body)
+    # 카카오 챗봇에서 보낸 요청값을 body에 저장
     params_df=body['action']['params']
-    #print(params_df)
-   
+    print(params_df)
+    # 카카오 챗봇에서 보낸 요청값 중 action -> params의 모든 정보 저장
     loc=params_df['loc']
-    #print(loc)
-    #print(type(loc))
+    print(loc)
+    # 사용자 발화값 중 입력값을 받기 위해 사용
 
     loc_li="'%" + loc + "%'"
+    # loc list
+    # sql 문법에 맞도록 형태 맞춰주기
     df1=start.db_select(loc_li)
+    # db_select함수에 loc_li값 입력
     #print(df1)
     name=df1['name']
-    #print(name)
-    #print(type(name))
+    print(name)
+    print(type(name))
+    # df1이라는 데이터프레임의 'name'컬럼값을 series형식으로 저장
     URL = df1['rink']
+    # df1이라는 데이터프레임의 'rink'컬럼값을 series형식으로 저장
     if len(df1) > 0:
         responseBody = {
             "version": "2.0",
@@ -132,7 +139,7 @@ def location():
                             },
                             "items": [
                                 {
-                                    "title": '죄송합니다 해당지역공고가 없습니다.',
+                                    "title": '현재 모집중인 공고가 없습니다.',
                                 },
                             ],
                             "buttons": [
@@ -151,3 +158,4 @@ def location():
 
     
     return responseBody
+
