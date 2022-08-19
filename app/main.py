@@ -5,8 +5,7 @@ import os,sys, json
 import pandas as pd 
 from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String
 import psycopg2
-import start
-
+import database
 
 app = Flask(__name__)
 
@@ -17,9 +16,9 @@ def hello():
 # 사용자가 공고를 보기 원할 때 
 @app.route("/api/anninputloc", methods=["post"])
 def announcement_input():  
-    body = request.get_json()
-    print(body)
-    print(body['userRequest']['utterance'])
+    req = request.get_json()
+    print(req)
+    print(req['userRequest']['utterance'])
     response = {
         "version" : "2.0",
         "template": {
@@ -36,9 +35,9 @@ def announcement_input():
 
 @app.route('/api/sayHello', methods=['POST'])
 def sayHello():
-    body = request.get_json() # 사용자가 입력한 데이터
-    print(body)
-    print(body['userRequest']['utterance'])
+    req = request.get_json() # 사용자가 입력한 데이터
+    print(req)
+    print(req['userRequest']['utterance'])
 
     responseBody = {
         "version": "2.0",
@@ -60,10 +59,10 @@ def sayHello():
 @app.route('/api/annout', methods=['POST'])
 def location():
     
-    body = request.get_json()
-    print(body)
+    req = request.get_json()
+    print(req)
     # 카카오 챗봇에서 보낸 요청값을 body에 저장
-    params_df=body['action']['params']
+    params_df=req['action']['params']
     print(params_df)
     # 카카오 챗봇에서 보낸 요청값 중 action -> params의 모든 정보 저장
     loc=params_df['loc']
@@ -73,7 +72,7 @@ def location():
     loc_li="'%" + loc + "%'"
     # loc list
     # sql 문법에 맞도록 형태 맞춰주기
-    df1=start.db_select(loc_li)
+    df1=database.area_db(loc_li)
     # db_select함수에 loc_li값 입력
     #print(df1)
     name=df1['name']
@@ -159,3 +158,28 @@ def location():
     
     return responseBody
 
+@app.route('/api/score', methods=['POST'])
+def score():
+
+    # 메시지 받기
+    req = request.get_json()
+    print(req)
+    # pizza_type = req["action"]["detailParams"]["피자종류"]["value"]
+    # address = req["action"]["detailParams"]["sys_text"]["value"]
+
+
+    # 메시지 설정
+    responseBody = {
+        "version": "2.0",
+        "template": {
+            "outputs": [
+                {
+                    "simpleText": {
+                        "text": '123'
+                    }
+                }
+            ]
+        }
+    }
+
+    return responseBody
