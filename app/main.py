@@ -181,6 +181,7 @@ def score():
         print(score_list3)
         score_end3 = score_list3[2][0]
         print(score_end3)
+        print(type(score_end3))
     
         result = score_end1 + score_end2 + score_end3
     except:
