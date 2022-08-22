@@ -174,8 +174,16 @@ def score():
     print(type(score1))
     score2 = int(sco2)
     score3 = int(sco3)
-    score_lis1 = database.score_db1(sco1)
-    print(score_lis1)
+    
+    score_list1 = database.score_db1(sco1)
+    score_end1 = score_list1[0]
+    score_list2 = database.score_db1(sco2)
+    score_end2 = score_list2[1]
+    score_list3 = database.score_db1(sco3)
+    score_end3 = score_list3[2]
+    
+    result = score_end1 + score_end2 + score_end3
+ 
 
 
     # 메시지 설정
@@ -185,7 +193,7 @@ def score():
             "outputs": [
                 {
                     "simpleText": {
-                        "text": score_lis1
+                        "text": result
                     }
                 }
             ]
