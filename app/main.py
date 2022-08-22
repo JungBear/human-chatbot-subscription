@@ -187,7 +187,7 @@ def score():
         print('sco1의 값입니다:',sco1)
         print('sco2의 값입니다:',sco3)
         print('sco3의 값입니다:',sco3)
-
+        print(type(sco1))
         score1 = int(sco1)
         score2 = int(sco2)  
         score3 = int(sco3)
