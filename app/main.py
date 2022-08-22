@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Verson : 93"
+    return "Verson : 94"
 
 @app.route("/api/hello")
 def test():
@@ -195,7 +195,6 @@ def score():
         # 형변환 str -> int
 
         score_list1 = database.score_db1(sco1)
-        print(score_list3)
         # 리스트의 형태로 입력받는다
         score_end1 = score_list1[0][0]
         print(score_end1)
@@ -205,6 +204,7 @@ def score():
         score_end2 = score_list2[1][0]
         # 조건2의 결괏값
         score_list3 = database.score_db1(sco3)
+        print(score_list3)
         # 조건3의 값이 조건2의값보다 크다
         # 조건3의 값이 조건2의 값보다 크면 리스트에 값이 입력이 안된다
         if len(score_list3) == 2:
@@ -217,7 +217,7 @@ def score():
             score_end3 = score_list3[2][0]
             # 조건3 <= 조건2일때
             # 원래대로 리스트의 갯수가 3개가 된다
-        
+        print(score_end3)
         result = score_end1 + score_end2 + score_end3
         # 우리가 필요한 값은 조건1, 2, 3의 총 합이므로 변수를 하나 설정해 준다
         # result = int
