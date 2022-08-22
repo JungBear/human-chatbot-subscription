@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Verson : 72"
+    return "Verson : 84"
 
 # 사용자가 공고를 보기 원할 때 
 @app.route("/api/anninputloc", methods=["post"])
@@ -156,36 +156,54 @@ def location():
 
 @app.route('/api/score', methods=['POST'])
 def score():
-
-    # 메시지 받기
     try:
+    # try-except는 예외처리문법
+    #  - 코드를 실행하는 중에 발생한 에러를 처리할때 사용
+    #  - 에러가 났을때 코드가 멈추지않고 계속 실행되게 사용
+    #  - 프로그램이 멈추는 현상 방지
         req = request.get_json()
         print(req)
+        # 카카오챗봇에서 요구받은값 출력
+        # heroku logs를 터미널에 입력하면 값을 볼 수 있음
         sco1 = req['action']['detailParams']['sys_text1']["value"]
-        # 첫번째 조건의 입력값
+        #'action/detailParams/sys_text1/value'의 값이 첫번째 조건의 입력값이 된다
         sco2 = req['action']['detailParams']['sys_text2']["value"]
         # 두번째 조건의 입력값
         sco3 = req['action']['detailParams']['sys_text3']["value"]
-        print(sco3)
         # 세번째 조건의 입력값
+
         score1 = int(sco1)
         score2 = int(sco2)  
         score3 = int(sco3)
         # 형변환 str -> int
 
         score_list1 = database.score_db1(sco1)
+        # 리스트의 형태로 입력받는다
         score_end1 = score_list1[0][0]
+        # 조건1의 결괏값
+        # 리스트의 형태 중 내가 원하는 인덱스값 불러오기
         score_list2 = database.score_db1(sco2)
         score_end2 = score_list2[1][0]
+        # 조건2의 결괏값
         score_list3 = database.score_db1(sco3)
-        print(score_list3)
+        # 조건3의 값이 조건2의값보다 크다
+        # 조건3의 값이 조건2의 값보다 크면 리스트에 값이 입력이 안된다
         if len(score_list3) == 2:
+            # 조건3의 값 > 조건2의 값
+            # 조건2의 값이 입력이안되어서 원래의 리스트의 갯수가 3개가 되어야하는데 2개가된다
+            # 그래서 리스트 갯수 = 2일 때로 지정
             score_end3 = score_list3[1][0]
+            
         else:
             score_end3 = score_list3[2][0]
-    
+            # 조건3 <= 조건2일때
+            # 원래대로 리스트의 갯수가 3개가 된다
+        
         result = score_end1 + score_end2 + score_end3
+        # 우리가 필요한 값은 조건1, 2, 3의 총 합이므로 변수를 하나 설정해 준다
+        # result = int
     except:
+    # 에러가 났을 경우 실행
         responseBody = {
             "version": "2.0",
             "template": {
@@ -199,7 +217,7 @@ def score():
             }
         }
     else:
-        # 메시지 설정
+    # 에러가 나지 않았을 경우 실행
         responseBody = {
             "version": "2.0",
             "template": {
@@ -207,12 +225,11 @@ def score():
                     {
                         "simpleText": {
                             "text": '조건1의 점수는 : {0} \n조건2의 점수는 : {1}\n조건3의 점수는 : {2}\n총합은 : {3}점 입니다.'.format(score_end1, score_end2, score_end3, result)
+                            # format매서드를 써서 변수값을 입력 가능하게 해준다.
+                            # {0}=score_end1, {1}=score_end2, {2}=score_end3, {3}=result
                         }
                     }
                 ]
             }
         }
-
-
-
     return responseBody
