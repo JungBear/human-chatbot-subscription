@@ -74,6 +74,4 @@ if __name__ == "__main__":
     #db_create()
     area_db()
     score_db1()
-    score_db2()
-    score_db3()
     app.run()

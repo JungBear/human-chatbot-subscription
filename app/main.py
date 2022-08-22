@@ -13,6 +13,22 @@ app = Flask(__name__)
 def hello():
     return "Verson : 84"
 
+@app.route("/api/hello")
+def test():
+    req = request.get_json()
+    response = {
+        "version" : "2.0",
+        "template": {
+            "outputs" : [
+                {
+                    'simpleText':{
+                        "text": "안녕하세요"
+                    }
+                }
+            ]
+        }
+    }
+
 # 사용자가 공고를 보기 원할 때 
 @app.route("/api/anninputloc", methods=["post"])
 def announcement_input():  
@@ -168,6 +184,9 @@ def score():
         # 두번째 조건의 입력값
         sco3 = req['action']['detailParams']['sys_text3']["value"]
         # 세번째 조건의 입력값
+        print('sco1의 값입니다:',sco1)
+        print('sco2의 값입니다:',sco3)
+        print('sco3의 값입니다:',sco3)
 
         score1 = int(sco1)
         score2 = int(sco2)  
