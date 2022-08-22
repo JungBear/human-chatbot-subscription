@@ -171,7 +171,7 @@ def score():
     print(type(score1))
     score2 = int(sco2)
     score3 = int(sco3)
-    score_lis1 = database.score_db1(score1)
+    score_lis1 = database.score_db1(sco1)
     print(score_lis1)
 
 
