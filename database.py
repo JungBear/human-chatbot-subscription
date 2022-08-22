@@ -9,20 +9,16 @@ engine.connect()
 
 def db_create():
     engine.execute("""
-        CREATE TABLE IF NOT EXISTS area(
+        CREATE TABLE IF NOT EXISTS score(
             name TEXT,
             division TEXT,
-            location TEXT,
-            notice_date TEXT,
-            start_day TEXT,
-            end_day TEXT,
-            release_date TEXT,
-            rink TEXT
+            score bigint,
+            input bigint
         );"""
     )
-    data = pd.read_csv('data/area.csv')
+    data = pd.read_csv('data/score.csv')
     print(data)
-    data.to_sql(name='area', con=engine, schema = 'public', if_exists='replace', index=False)
+    data.to_sql(name='score', con=engine, schema = 'public', if_exists='replace', index=False)
 
 
 
