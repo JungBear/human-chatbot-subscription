@@ -164,8 +164,14 @@ def score():
     # 메시지 받기
     req = request.get_json()
     print(req)
-    # pizza_type = req["action"]["detailParams"]["피자종류"]["value"]
-    # address = req["action"]["detailParams"]["sys_text"]["value"]
+    sco1 = req['action']['detailParams']['sys_text1']["value"]
+    sco2 = req['action']['detailParams']['sys_text2']["value"]
+    sco3 = req['action']['detailParams']['sys_text3']["value"]
+    score1 = int(sco1)
+    score2 = int(sco2)
+    score3 = int(sco3)
+    score_lis1 = database.score_db1(score1)
+    print(score_lis1)
 
 
     # 메시지 설정
@@ -175,7 +181,7 @@ def score():
             "outputs": [
                 {
                     "simpleText": {
-                        "text": '123'
+                        "text": score_lis1
                     }
                 }
             ]
