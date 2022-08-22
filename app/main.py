@@ -181,20 +181,6 @@ def score():
         score_end3 = score_list3[2][0]
     
         result = score_end1 + score_end2 + score_end3
- 
-        # 메시지 설정
-        responseBody = {
-            "version": "2.0",
-            "template": {
-                "outputs": [
-                    {
-                        "simpleText": {
-                            "text": result
-                        }
-                    }
-                ]
-            }
-        }
     except:
         responseBody = {
             "version": "2.0",
@@ -208,7 +194,21 @@ def score():
                 ]
             }
         }
-        
+    else:
+        # 메시지 설정
+        responseBody = {
+            "version": "2.0",
+            "template": {
+                "outputs": [
+                    {
+                        "simpleText": {
+                            "text": result
+                        }
+                    }
+                ]
+            }
+        }
+
 
 
     return responseBody
