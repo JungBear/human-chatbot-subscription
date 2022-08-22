@@ -168,6 +168,7 @@ def score():
     sco2 = req['action']['detailParams']['sys_text2']["value"]
     sco3 = req['action']['detailParams']['sys_text3']["value"]
     score1 = int(sco1)
+    print(type(score1))
     score2 = int(sco2)
     score3 = int(sco3)
     score_lis1 = database.score_db1(score1)
