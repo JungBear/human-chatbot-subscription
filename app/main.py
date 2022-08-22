@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Verson : 84"
+    return "Verson : 90"
 
 @app.route("/api/hello")
 def test():
