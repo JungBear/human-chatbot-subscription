@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Verson : 94"
+    return "Verson : 95"
 
 @app.route("/api/hello")
 def test():
@@ -219,6 +219,7 @@ def score():
             # 원래대로 리스트의 갯수가 3개가 된다
         print(score_end3)
         result = score_end1 + score_end2 + score_end3
+        print(result)
         # 우리가 필요한 값은 조건1, 2, 3의 총 합이므로 변수를 하나 설정해 준다
         # result = int
     except:
