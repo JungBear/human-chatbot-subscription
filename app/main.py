@@ -185,7 +185,7 @@ def score():
         sco3 = req['action']['detailParams']['sys_text3']["value"]
         # 세번째 조건의 입력값
         print('sco1의 값입니다:',sco1)
-        print('sco2의 값입니다:',sco3)
+        print('sco2의 값입니다:',sco2)
         print('sco3의 값입니다:',sco3)
         print(type(sco1))
         score1 = int(sco1)
