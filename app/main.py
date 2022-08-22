@@ -166,6 +166,7 @@ def score():
         sco2 = req['action']['detailParams']['sys_text2']["value"]
         # 두번째 조건의 입력값
         sco3 = req['action']['detailParams']['sys_text3']["value"]
+        print(sco3)
         # 세번째 조건의 입력값
         score1 = int(sco1)
         score2 = int(sco2)  
@@ -175,10 +176,9 @@ def score():
         score_end1 = score_list1[0][0]
         score_list2 = database.score_db1(sco2)
         score_end2 = score_list2[1][0]
-        print(score_end2)
         score_list3 = database.score_db1(sco3)
-        print(score_list3)
         score_end3 = score_list3[2][0]
+        print(score_end3)
     
         result = score_end1 + score_end2 + score_end3
     except:
@@ -202,7 +202,7 @@ def score():
                 "outputs": [
                     {
                         "simpleText": {
-                            "text": '조건1의 점수는 : {0} \n조건2의 점수는 : {1}\n조건3의 점수는 : {2}\n총합은 : {3}'.format(score_end1, score_end2, score_end3, result)
+                            "text": '조건1의 점수는 : {0} \n조건2의 점수는 : {1}\n조건3의 점수는 : {2}\n총합은 : {3}점 입니다.'.format(score_end1, score_end2, score_end3, result)
                         }
                     }
                 ]
