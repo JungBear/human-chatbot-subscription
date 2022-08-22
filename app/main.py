@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Verson : 65"
+    return "Verson : 72"
 
 # 사용자가 공고를 보기 원할 때 
 @app.route("/api/anninputloc", methods=["post"])
@@ -179,7 +179,9 @@ def score():
     score_end1 = score_list1[0]
     score_list2 = database.score_db1(sco2)
     score_end2 = score_list2[1]
+    print(score_end2)
     score_list3 = database.score_db1(sco3)
+    print(score_list3)
     score_end3 = score_list3[2]
     
     result = score_end1 + score_end2 + score_end3
