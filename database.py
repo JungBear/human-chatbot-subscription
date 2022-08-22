@@ -8,6 +8,10 @@ engine = create_engine("postgresql://xnrniyjhurkuos:b0d752cc9e29106fb8c4b1f7cd39
 engine.connect()
 
 def db_create():
+    engine = create_engine("postgresql://xnrniyjhurkuos:b0d752cc9e29106fb8c4b1f7cd39c985a5a23bb67a35d8c365a6175355e9bf13@ec2-50-19-255-190.compute-1.amazonaws.com:5432/dashvvhprslttt", echo = False)
+
+    engine.connect()
+
     engine.execute("""
         CREATE TABLE IF NOT EXISTS score(
             name TEXT,
