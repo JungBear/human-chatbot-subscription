@@ -68,11 +68,7 @@ def location():
     loc=params_df['loc']
     print(loc)
     # 사용자 발화값 중 입력값을 받기 위해 사용
-
-    loc_li="'%" + loc + "%'"
-    # loc list
-    # sql 문법에 맞도록 형태 맞춰주기
-    df1=database.area_db(loc_li)
+    df1=database.area_db(loc)
     # db_select함수에 loc_li값 입력
     #print(df1)
     name=df1['name']

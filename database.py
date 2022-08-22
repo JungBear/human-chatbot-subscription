@@ -35,7 +35,7 @@ def area_db(loc):
     # 생성된 임시객체를 cur에 저장
     #loc = "\'평택'"
     # sql = "SELECT * FROM announcement WHERE Location LIKE %s;"
-    cur.execute("SELECT * FROM public.area WHERE location LIKE {};".format(loc))
+    cur.execute("SELECT * FROM public.area WHERE location LIKE %{}%;".format(loc))
     # sql문장을 실행할 수 있게 해주는 메서드
     # Location 컬럼에 loc가 포함되는 행 출력해주는 쿼리
     rows = cur.fetchall() 
