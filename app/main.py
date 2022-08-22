@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Verson : 90"
+    return "Verson : 91"
 
 @app.route("/api/hello")
 def test():
@@ -191,6 +191,7 @@ def score():
         score1 = int(sco1)
         score2 = int(sco2)  
         score3 = int(sco3)
+        print(type(score1))
         # 형변환 str -> int
 
         score_list1 = database.score_db1(sco1)
