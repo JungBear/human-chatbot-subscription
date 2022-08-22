@@ -62,10 +62,7 @@ def location():
     req = request.get_json()
     print(req)
     # 카카오 챗봇에서 보낸 요청값을 body에 저장
-    params_df=req['action']['params']
-    print(params_df)
-    # 카카오 챗봇에서 보낸 요청값 중 action -> params의 모든 정보 저장
-    loc=params_df['loc']
+    loc=req['action']['params']['loc']
     print(loc)
     # 사용자 발화값 중 입력값을 받기 위해 사용
     df1=database.area_db(loc)
