@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Verson : 91"
+    return "Verson : 92"
 
 @app.route("/api/hello")
 def test():
@@ -195,8 +195,10 @@ def score():
         # 형변환 str -> int
 
         score_list1 = database.score_db1(sco1)
+        print(score_list1)
         # 리스트의 형태로 입력받는다
         score_end1 = score_list1[0][0]
+        print(score_end1)
         # 조건1의 결괏값
         # 리스트의 형태 중 내가 원하는 인덱스값 불러오기
         score_list2 = database.score_db1(sco2)
