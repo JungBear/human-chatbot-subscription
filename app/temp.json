@@ -4,8 +4,8 @@
       "name":"샘플삭제예정"
    },
    "intent":{
-      "id":"62f90b2ef534cf44c78ecafc",
-      "name":"test2",
+      "id":"62ff11cd9a43ea1c82653de4",
+      "name":"test3",
       "extra":{
          "reason":{
             "code":0,
@@ -18,7 +18,8 @@
       "name":"answer",
       "params":{
          "sys_text1":"2",
-         "sys_text":"3"
+         "sys_text2":"3",
+         "sys_text3":"10"
       },
       "detailParams":{
          "sys_text1":{
@@ -26,10 +27,15 @@
             "origin":"2",
             "value":"2"
          },
-         "sys_text":{
+         "sys_text2":{
             "groupName":"",
             "origin":"3",
             "value":"3"
+         },
+         "sys_text3":{
+            "groupName":"",
+            "origin":"10",
+            "value":"10"
          }
       },
       "clientExtra":{
@@ -38,8 +44,8 @@
    },
    "userRequest":{
       "block":{
-         "id":"62f90b2ef534cf44c78ecafc",
-         "name":"test2"
+         "id":"62ff11cd9a43ea1c82653de4",
+         "name":"test3"
       },
       "user":{
          "id":"98aac6b6a1b00b3e2bbc7044f65710ad0fdb60c6b637f6f6fdb17163a16b4e4be2",
@@ -49,7 +55,7 @@
             "bot_user_key":"98aac6b6a1b00b3e2bbc7044f65710ad0fdb60c6b637f6f6fdb17163a16b4e4be2"
          }
       },
-      "utterance":"",
+      "utterance":"as\n",
       "params":{
          "surface":"BuilderBotTest",
          "ignoreMe":"true"
@@ -59,22 +65,41 @@
    },
    "contexts":[
       {
-         "name":"Count",
-         "lifespan":4,
-         "ttl":600,
-         "params":{
-            
-         }
-      },
-      {
-         "name":"Order",
-         "lifespan":3,
+         "name":"Order1",
+         "lifespan":9,
          "ttl":600,
          "params":{
             "sys_text":{
+               "value":"10",
+               "resolvedValue":"10"
+            },
+            "sys_text1":{
                "value":"2",
                "resolvedValue":"2"
             }
+         }
+      },
+      {
+         "name":"Order2",
+         "lifespan":10,
+         "ttl":600,
+         "params":{
+            "sys_text":{
+               "value":"20",
+               "resolvedValue":"20"
+            },
+            "sys_text2":{
+               "value":"3",
+               "resolvedValue":"3"
+            }
+         }
+      },
+      {
+         "name":"Start",
+         "lifespan":3,
+         "ttl":600,
+         "params":{
+            
          }
       }
    ]

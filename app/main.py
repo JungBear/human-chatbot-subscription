@@ -202,7 +202,7 @@ def score():
                 "outputs": [
                     {
                         "simpleText": {
-                            "text": '조건1의 점수는 : {0} \n 조건2의 점수는 : {1}\n 조건3의 점수는 :{2}\n 총합은 : {3}'.format(score_end1, score_end2, score_end3, result)
+                            "text": '조건1의 점수는 : {0} \n조건2의 점수는 : {1}\n조건3의 점수는 : {2}\n총합은 : {3}'.format(score_end1, score_end2, score_end3, result)
                         }
                     }
                 ]
