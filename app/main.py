@@ -158,43 +158,57 @@ def location():
 def score():
 
     # 메시지 받기
-    req = request.get_json()
-    print(req)
-    sco1 = req['action']['detailParams']['sys_text1']["value"]
-    # 첫번째 조건의 입력값
-    sco2 = req['action']['detailParams']['sys_text2']["value"]
-    # 두번째 조건의 입력값
-    sco3 = req['action']['detailParams']['sys_text3']["value"]
-    # 세번째 조건의 입력값
-    score1 = int(sco1)
-    score2 = int(sco2)
-    score3 = int(sco3)
+    try:
+        req = request.get_json()
+        print(req)
+        sco1 = req['action']['detailParams']['sys_text1']["value"]
+        # 첫번째 조건의 입력값
+        sco2 = req['action']['detailParams']['sys_text2']["value"]
+        # 두번째 조건의 입력값
+        sco3 = req['action']['detailParams']['sys_text3']["value"]
+        # 세번째 조건의 입력값
+        score1 = int(sco1)
+        score2 = int(sco2)  
+        score3 = int(sco3)
     
-    score_list1 = database.score_db1(sco1)
-    score_end1 = score_list1[0][0]
-    score_list2 = database.score_db1(sco2)
-    score_end2 = score_list2[1][0]
-    print(score_end2)
-    score_list3 = database.score_db1(sco3)
-    print(score_list3)
-    score_end3 = score_list3[2][0]
+        score_list1 = database.score_db1(sco1)
+        score_end1 = score_list1[0][0]
+        score_list2 = database.score_db1(sco2)
+        score_end2 = score_list2[1][0]
+        print(score_end2)
+        score_list3 = database.score_db1(sco3)
+        print(score_list3)
+        score_end3 = score_list3[2][0]
     
-    result = score_end1 + score_end2 + score_end3
+        result = score_end1 + score_end2 + score_end3
  
-
-
-    # 메시지 설정
-    responseBody = {
-        "version": "2.0",
-        "template": {
-            "outputs": [
-                {
-                    "simpleText": {
-                        "text": result
+        # 메시지 설정
+        responseBody = {
+            "version": "2.0",
+            "template": {
+                "outputs": [
+                    {
+                        "simpleText": {
+                            "text": result
+                        }
                     }
-                }
-            ]
+                ]
+            }
         }
-    }
+    except:
+        responseBody = {
+            "version": "2.0",
+            "template": {
+                "outputs": [
+                    {
+                        "simpleText": {
+                            "text": '잘못입력하셨습니다'
+                        }
+                    }
+                ]
+            }
+        }
+        
+
 
     return responseBody
