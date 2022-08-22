@@ -165,8 +165,11 @@ def score():
     req = request.get_json()
     print(req)
     sco1 = req['action']['detailParams']['sys_text1']["value"]
+    # 첫번째 조건의 입력값
     sco2 = req['action']['detailParams']['sys_text2']["value"]
+    # 두번째 조건의 입력값
     sco3 = req['action']['detailParams']['sys_text3']["value"]
+    # 세번째 조건의 입력값
     score1 = int(sco1)
     print(type(score1))
     score2 = int(sco2)

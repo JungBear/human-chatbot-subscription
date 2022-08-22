@@ -55,7 +55,7 @@ def score_db1(sel):
     cur = conn.cursor()
     # cursor = 임시 객체생성
     # 생성된 임시객체를 cur에 저장
-    cur.execute("SELECT score FROM public.score WHERE input {};".format(sel))
+    cur.execute("SELECT score FROM public.score WHERE input = {};".format(sel))
     # sql문장을 실행할 수 있게 해주는 메서드
     # Location 컬럼에 loc가 포함되는 행 출력해주는 쿼리
     rows = cur.fetchall() 
