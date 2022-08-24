@@ -230,7 +230,7 @@ def score():
                 "outputs": [
                     {
                         "basicCard": {
-                            "text": '잘못입력하셨습니다'
+                            "title": '잘못입력하셨습니다'
                         },
                         "buttons": [
                             {
