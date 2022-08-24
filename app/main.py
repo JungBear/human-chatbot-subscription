@@ -231,10 +231,9 @@ def score():
                     {
                         "basicCard": {
                             "title": '잘못입력하셨습니다',
-
-                        },
-                        "thumbnail": {
-                            "imageUrl": ""
+                            "thumbnail": {
+                                "imageUrl": ""
+                            },
                         },
                         "buttons": [
                             {
