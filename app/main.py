@@ -11,7 +11,6 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    database.db_create()
     return "Verson : 97"
 
 @app.route("/api/hello")
@@ -230,9 +229,21 @@ def score():
             "template": {
                 "outputs": [
                     {
-                        "simpleText": {
+                        "basicCard": {
                             "text": '잘못입력하셨습니다'
-                        }
+                        },
+                        "buttons": [
+                            {
+                                "action": "block",
+                                "label": "처음으로",
+                                "blockId": "62f5bbff70055f434dccff3b"
+                            },
+                            {
+                                "action":  "block",
+                                "label": "다시하기",
+                                "blockId": "62fcf4c58a1240569898cd10"
+                            }
+                        ]
                     }
                 ]
             }
