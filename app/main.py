@@ -247,16 +247,20 @@ def score():
         print(req)
         # 카카오챗봇에서 요구받은값 출력
         # heroku logs를 터미널에 입력하면 값을 볼 수 있음
+
         sco1 = req['action']['detailParams']['sys_text1']["value"]
         #'action/detailParams/sys_text1/value'의 값이 첫번째 조건의 입력값이 된다
         sco2 = req['action']['detailParams']['sys_text2']["value"]
         # 두번째 조건의 입력값
         sco3 = req['action']['detailParams']['sys_text3']["value"]
         # 세번째 조건의 입력값
+
         print('sco1의 값입니다:',sco1)
         print('sco2의 값입니다:',sco2)
         print('sco3의 값입니다:',sco3)
         print(type(sco1))
+        # type = str
+
         score1 = int(sco1)
         score2 = int(sco2)  
         score3 = int(sco3)
@@ -265,6 +269,7 @@ def score():
 
         score_list1 = database.score_db1(sco1)
         # 리스트의 형태로 입력받는다
+
         score_end1 = score_list1[0][0]
         print(score_end1)
         # 조건1의 결괏값
@@ -276,6 +281,7 @@ def score():
         print(score_list3)
         # 조건3의 값이 조건2의값보다 크다
         # 조건3의 값이 조건2의 값보다 크면 리스트에 값이 입력이 안된다
+        
         if len(score_list3) == 2:
             # 조건3의 값 > 조건2의 값
             # 조건2의 값이 입력이안되어서 원래의 리스트의 갯수가 3개가 되어야하는데 2개가된다
@@ -291,6 +297,7 @@ def score():
         print(result)
         # 우리가 필요한 값은 조건1, 2, 3의 총 합이므로 변수를 하나 설정해 준다
         # result = int
+    
     except:
     # 에러가 났을 경우 실행
         responseBody = {
@@ -326,7 +333,7 @@ def score():
                     {
                         "simpleText": {
                             "text": '조건1의 점수는 : {0} \n조건2의 점수는 : {1}\n조건3의 점수는 : {2}\n총합은 : {3}점 입니다.'.format(score_end1, score_end2, score_end3, result)
-                            # format매서드를 써서 변수값을 입력 가능하게 해준다.
+                            # format매서드를 써서 변수값을 출력 가능하게 해준다.
                             # {0}=score_end1, {1}=score_end2, {2}=score_end3, {3}=result
                         }
                     }
