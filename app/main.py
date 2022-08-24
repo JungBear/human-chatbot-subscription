@@ -90,7 +90,7 @@ def location():
     # df1이라는 데이터프레임의 'name'컬럼값을 series형식으로 저장
     URL = df1['rink']
     # df1이라는 데이터프레임의 'rink'컬럼값을 series형식으로 저장
-    if len(df1) > 0:
+    if len(df1) == 3:
         responseBody = {
             "version": "2.0",
             "template": {
@@ -135,7 +135,76 @@ def location():
                 ]
             }
         }
-    else :
+    elif len(df1) == 2:
+        responseBody = {
+            "version": "2.0",
+            "template": {
+                "outputs": [
+                    {
+                        "listCard": {
+                            "header": {
+                                "title": "공고 내역입니다."
+                            },
+                            "items": [
+                                {
+                                    "title": name[0],
+                                    "imageUrl": "http://k.kakaocdn.net/dn/APR96/btqqH7zLanY/kD5mIPX7TdD2NAxgP29cC0/1x1.jpg",
+                                    "link": {
+                                        "web": URL[0]
+                                    }
+                                },
+                                {
+                                    "title": name[1],
+                                    "imageUrl": "http://k.kakaocdn.net/dn/N4Epz/btqqHCfF5II/a3kMRckYml1NLPEo7nqTmK/1x1.jpg",
+                                    "link": {
+                                        "web": URL[1]
+                                    }
+                                }
+                            ],
+                            "buttons": [
+                                {
+                                    "label": "더보기",
+                                    "action": "webLink",
+                                    "webLinkUrl": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancListView.do#"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    elif len(df1) == 1:
+        responseBody = {
+            "version": "2.0",
+            "template": {
+                "outputs": [
+                    {
+                        "listCard": {
+                            "header": {
+                                "title": "공고 내역입니다."
+                            },
+                            "items": [
+                                {
+                                    "title": name[0],
+                                    "imageUrl": "http://k.kakaocdn.net/dn/APR96/btqqH7zLanY/kD5mIPX7TdD2NAxgP29cC0/1x1.jpg",
+                                    "link": {
+                                        "web": URL[0]
+                                    }
+                                }
+                            ],
+                            "buttons": [
+                                {
+                                    "label": "더보기",
+                                    "action": "webLink",
+                                    "webLinkUrl": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancListView.do#"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    else:
         responseBody = {
             "version": "2.0",
             "template": {
