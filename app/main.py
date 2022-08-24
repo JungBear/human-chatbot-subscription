@@ -90,7 +90,7 @@ def location():
     # df1이라는 데이터프레임의 'name'컬럼값을 series형식으로 저장
     URL = df1['rink']
     # df1이라는 데이터프레임의 'rink'컬럼값을 series형식으로 저장
-    if len(df1) == 3:
+    if len(df1) >= 3:
         responseBody = {
             "version": "2.0",
             "template": {
@@ -204,7 +204,7 @@ def location():
                 ]
             }
         }
-    else:
+    elif len(df1) == 0:
         responseBody = {
             "version": "2.0",
             "template": {
