@@ -239,7 +239,7 @@ def score():
                                 "blockId": "62f5bbff70055f434dccff3b"
                             },
                             {
-                                "action":  "block",
+                                "action": "block",
                                 "label": "다시하기",
                                 "blockId": "62fcf4c58a1240569898cd10"
                             }
