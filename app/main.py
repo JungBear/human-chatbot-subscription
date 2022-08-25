@@ -148,7 +148,7 @@ def location():
                     },
                     {
                     "carousel": {
-                        "type": "listCard",
+                        "type": "ListCard",
                         "items": [
                                 {
                                     "title": name[0],
