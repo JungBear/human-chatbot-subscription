@@ -141,15 +141,11 @@ def location():
             "template": {
                 "outputs": [
                     {
-                        "simpleText": {
-                            
-                            "text": "현재 검색된 공고는 {}개 입니다.".format(x)
-                        }
-                    },
-                    {
-                    "carousel": {
-                        "type": "ListCard",
-                        "items": [
+                        "listCard": {
+                            "header": {
+                                "해당지역에 {}개의 공고가 있습니다.".format(x)
+                            },
+                            "items": [
                                 {
                                     "title": name[0],
                                     "description": location[0],
