@@ -9,21 +9,22 @@ def db_create():
 
     engine.connect()
 
-    engine = create_engine("postgresql://xnrniyjhurkuos:b0d752cc9e29106fb8c4b1f7cd39c985a5a23bb67a35d8c365a6175355e9bf13@ec2-50-19-255-190.compute-1.amazonaws.com:5432/dashvvhprslttt", echo = False)
-
-    engine.connect()
-
     engine.execute("""
-        CREATE TABLE IF NOT EXISTS score(
+        CREATE TABLE IF NOT EXISTS area(
             name TEXT,
             division TEXT,
-            score bigint,
-            input bigint
+            location TEXT,
+            notice_date TEXT,
+            start_day TEXT,
+            end_day TEXT,
+            release_date TEXT,
+            rink TEXT,
+            image TEXT
         );"""
     )
-    data = pd.read_csv('data/score.csv')
+    data = pd.read_csv('data/area.csv')
     print(data)
-    data.to_sql(name='score', con=engine, schema = 'public', if_exists='replace', index=False)
+    data.to_sql(name='area', con=engine, schema = 'public', if_exists='replace', index=False)
 
 
 
@@ -41,7 +42,7 @@ def area_db(loc):
     rows = cur.fetchall() 
     # 데이터내용 전부 불러서 rows에 입력
     # list 타입
-    df = pd.DataFrame(rows, columns = ['name','division','location','notice_date','start_day','end_day','release_date','rink'])
+    df = pd.DataFrame(rows, columns = ['name','division','location','notice_date','start_day','end_day','release_date','rink', 'image'])
     #print(df)
     # DataFrame으로 만들어주기
     # 컬럼명을 지정
