@@ -101,9 +101,9 @@ def location():
                 "outputs": [
                     {
                         "SimpleText": {
-                            "text": {"해당지역에 {}개의 공고가 있습니다.".format(x)
-                            
-                        },
+                            "header": {
+                                "title": "공고 내역입니다."
+                            },
                             "items": [
                                 {
                                     "title": name[0],
@@ -143,7 +143,7 @@ def location():
                     {
                         "listCard": {
                             "header": {
-                                "해당지역에 {}개의 공고가 있습니다.".format(x)
+                                "title": "공고 내역입니다."
                             },
                             "items": [
                                 {
@@ -176,7 +176,7 @@ def location():
                     {
                         "listCard": {
                             "header": {
-                                "해당지역에 {}개의 공고가 있습니다.".format(x)
+                                "title": "공고 내역입니다."
                             },
                             "items": [
                                 {
@@ -201,7 +201,7 @@ def location():
                     {
                         "listCard": {
                             "header": {
-                                "title": "해당지역에 {}개의 공고가 있습니다.".format(x)
+                                "title": "공고 내역입니다."
                             },
                             "items": [
                                 {
