@@ -124,13 +124,6 @@ def location():
                                         "web": URL[2]
                                     }
                                 }
-                            ],
-                            "buttons": [
-                                {
-                                    "label": "더보기",
-                                    "action": "webLink",
-                                    "webLinkUrl": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancListView.do#"
-                                }
                             ]
                         }
                     }
@@ -162,13 +155,6 @@ def location():
                                         "web": URL[1]
                                     }
                                 }
-                            ],
-                            "buttons": [
-                                {
-                                    "label": "더보기",
-                                    "action": "webLink",
-                                    "webLinkUrl": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancListView.do#"
-                                }
                             ]
                         }
                     }
@@ -192,13 +178,6 @@ def location():
                                     "link": {
                                         "web": URL[0]
                                     }
-                                }
-                            ],
-                            "buttons": [
-                                {
-                                    "label": "더보기",
-                                    "action": "webLink",
-                                    "webLinkUrl": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancListView.do#"
                                 }
                             ]
                         }
