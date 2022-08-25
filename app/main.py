@@ -93,6 +93,7 @@ def location():
     # df1이라는 데이터프레임의 'rink'컬럼값을 series형식으로 저장
     image=df1['image']
     location = df1['location']
+    x = len(df1)
     if len(df1) >= 3:
         responseBody = {
             "version": "2.0",
@@ -101,7 +102,7 @@ def location():
                     {
                         "listCard": {
                             "header": {
-                                "title": "해당지역에 {}개의 공고가 있습니다.".format(len(df1))
+                                "title": "해당지역에 {}개의 공고가 있습니다.".format(x)
                             },
                             "items": [
                                 {
@@ -142,7 +143,7 @@ def location():
                     {
                         "listCard": {
                             "header": {
-                                "해당지역에 {}개의 공고가 있습니다.".format(len(df1))
+                                "해당지역에 {}개의 공고가 있습니다.".format(x)
                             },
                             "items": [
                                 {
@@ -175,7 +176,7 @@ def location():
                     {
                         "listCard": {
                             "header": {
-                                "해당지역에 {}개의 공고가 있습니다.".format(len(df1))
+                                "해당지역에 {}개의 공고가 있습니다.".format(x)
                             },
                             "items": [
                                 {
@@ -200,7 +201,7 @@ def location():
                     {
                         "listCard": {
                             "header": {
-                                "title": "해당지역에 {}개의 공고가 있습니다.".format(len(df1))
+                                "title": "해당지역에 {}개의 공고가 있습니다.".format(x)
                             },
                             "items": [
                                 {
