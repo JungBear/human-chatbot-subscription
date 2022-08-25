@@ -92,6 +92,7 @@ def location():
     URL = df1['rink']
     # df1이라는 데이터프레임의 'rink'컬럼값을 series형식으로 저장
     image=df1['image']
+    location = df1['location']
     if len(df1) >= 3:
         responseBody = {
             "version": "2.0",
@@ -105,6 +106,7 @@ def location():
                             "items": [
                                 {
                                     "title": name[0],
+                                    "description": location[0],
                                     "imageUrl": image[0],
                                     "link": {
                                         "web": URL[0]
@@ -112,6 +114,7 @@ def location():
                                 },
                                 {
                                     "title": name[1],
+                                    "description": location[1],
                                     "imageUrl": image[1],
                                     "link": {
                                         "web": URL[1]
@@ -119,6 +122,7 @@ def location():
                                 },
                                 {
                                     "title": name[2],
+                                    "description": location[2],
                                     "imageUrl": image[2],
                                     "link": {
                                         "web": URL[2]
@@ -143,6 +147,7 @@ def location():
                             "items": [
                                 {
                                     "title": name[0],
+                                    "description": location[0],
                                     "imageUrl": image[0],
                                     "link": {
                                         "web": URL[0]
@@ -150,6 +155,7 @@ def location():
                                 },
                                 {
                                     "title": name[1],
+                                    "description": location[1],
                                     "imageUrl": image[1],
                                     "link": {
                                         "web": URL[1]
@@ -174,6 +180,7 @@ def location():
                             "items": [
                                 {
                                     "title": name[0],
+                                    "description": location[0],
                                     "imageUrl": image[0],
                                     "link": {
                                         "web": URL[0]
