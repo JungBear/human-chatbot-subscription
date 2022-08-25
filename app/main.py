@@ -12,7 +12,7 @@ app = Flask(__name__)
 @app.route("/")
 def hello():
     # database.db_create()
-    return "Verson : 108"
+    return "Verson : 112"
 
 @app.route("/api/hello")
 def test():
@@ -101,7 +101,7 @@ def location():
                     {
                         "listCard": {
                             "header": {
-                                "title": "공고 내역입니다."
+                                "title": "해당지역에 {}개의 공고가 있습니다.".format(len(df1))
                             },
                             "items": [
                                 {
@@ -142,7 +142,7 @@ def location():
                     {
                         "listCard": {
                             "header": {
-                                "title": "공고 내역입니다."
+                                "해당지역에 {}개의 공고가 있습니다.".format(len(df1))
                             },
                             "items": [
                                 {
@@ -175,7 +175,7 @@ def location():
                     {
                         "listCard": {
                             "header": {
-                                "title": "공고 내역입니다."
+                                "해당지역에 {}개의 공고가 있습니다.".format(len(df1))
                             },
                             "items": [
                                 {
@@ -200,7 +200,7 @@ def location():
                     {
                         "listCard": {
                             "header": {
-                                "title": "공고 내역입니다."
+                                "title": "해당지역에 {}개의 공고가 있습니다.".format(len(df1))
                             },
                             "items": [
                                 {
