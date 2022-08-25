@@ -100,10 +100,10 @@ def location():
             "template": {
                 "outputs": [
                     {
-                        "listCard": {
-                            "header": {
-                                "title": "해당지역에 {}개의 공고가 있습니다.".format(x)
-                            },
+                        "SimpleText": {
+                            "text": {"해당지역에 {}개의 공고가 있습니다.".format(x)
+                            
+                        },
                             "items": [
                                 {
                                     "title": name[0],
@@ -141,11 +141,15 @@ def location():
             "template": {
                 "outputs": [
                     {
-                        "listCard": {
-                            "header": {
-                                "해당지역에 {}개의 공고가 있습니다.".format(x)
-                            },
-                            "items": [
+                        "simpleText": {
+                            
+                            "text": "현재 검색된 공고는 {}개 입니다.".format(x)
+                        }
+                    },
+                    {
+                    "carousel": {
+                        "type": "listCard",
+                        "items": [
                                 {
                                     "title": name[0],
                                     "description": location[0],
