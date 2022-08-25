@@ -1,6 +1,6 @@
 from app.main import app
-from database import db_create
+import database
 
 if __name__ == "__main__":
-    db_create()
+    database.db_create()
     app.run(threaded=True, port=5000)

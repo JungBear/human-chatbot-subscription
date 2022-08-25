@@ -12,7 +12,7 @@ app = Flask(__name__)
 @app.route("/")
 def hello():
     database.db_create()
-    return "Verson : 97"
+    return "Verson : 107"
 
 @app.route("/api/hello")
 def test():
