@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    database.db_create()
+    # database.db_create()
     return "Verson : 108"
 
 @app.route("/api/hello")
@@ -91,6 +91,7 @@ def location():
     # df1이라는 데이터프레임의 'name'컬럼값을 series형식으로 저장
     URL = df1['rink']
     # df1이라는 데이터프레임의 'rink'컬럼값을 series형식으로 저장
+    image=df1['image']
     if len(df1) >= 3:
         responseBody = {
             "version": "2.0",
@@ -104,21 +105,21 @@ def location():
                             "items": [
                                 {
                                     "title": name[0],
-                                    "imageUrl": "http://k.kakaocdn.net/dn/APR96/btqqH7zLanY/kD5mIPX7TdD2NAxgP29cC0/1x1.jpg",
+                                    "imageUrl": image[0],
                                     "link": {
                                         "web": URL[0]
                                     }
                                 },
                                 {
                                     "title": name[1],
-                                    "imageUrl": "http://k.kakaocdn.net/dn/N4Epz/btqqHCfF5II/a3kMRckYml1NLPEo7nqTmK/1x1.jpg",
+                                    "imageUrl": image[1],
                                     "link": {
                                         "web": URL[1]
                                     }
                                 },
                                 {
                                     "title": name[2],
-                                    "imageUrl": "http://k.kakaocdn.net/dn/bE8AKO/btqqFHI6vDQ/mWZGNbLIOlTv3oVF1gzXKK/1x1.jpg",
+                                    "imageUrl": image[2],
                                     "link": {
                                         "web": URL[2]
                                     }
@@ -149,14 +150,14 @@ def location():
                             "items": [
                                 {
                                     "title": name[0],
-                                    "imageUrl": "http://k.kakaocdn.net/dn/APR96/btqqH7zLanY/kD5mIPX7TdD2NAxgP29cC0/1x1.jpg",
+                                    "imageUrl": image[0],
                                     "link": {
                                         "web": URL[0]
                                     }
                                 },
                                 {
                                     "title": name[1],
-                                    "imageUrl": "http://k.kakaocdn.net/dn/N4Epz/btqqHCfF5II/a3kMRckYml1NLPEo7nqTmK/1x1.jpg",
+                                    "imageUrl": image[1],
                                     "link": {
                                         "web": URL[1]
                                     }
@@ -187,7 +188,7 @@ def location():
                             "items": [
                                 {
                                     "title": name[0],
-                                    "imageUrl": "http://k.kakaocdn.net/dn/APR96/btqqH7zLanY/kD5mIPX7TdD2NAxgP29cC0/1x1.jpg",
+                                    "imageUrl": image[0],
                                     "link": {
                                         "web": URL[0]
                                     }
