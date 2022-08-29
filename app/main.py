@@ -294,27 +294,27 @@ def score():
         }
     else:
     # 에러가 나지 않았을 경우 실행
-        responseBody = {"version": "2.0",
-        "template": {
-            "outputs": [
-                {
-        
-                    "basicCard": {
-                        "title": "귀하의 총합은 : {0}점 입니다.".format(result),
-                            # format매서드를 써서 변수값을 출력 가능하게 해준다.
-                        "description": "조건1의 점수는 : {0} \n조건2의 점수는 : {1}\n조건3의 점수는 : {2}".format(score_end1,score_end2,score_end3)
-                        "thumbnail": {
-                            "imageUrl": "https://raw.githubusercontent.com/JungBear/human-chatbot-subscription/main/image/%EC%9D%BC%EB%B0%98%EA%B3%B5%EA%B8%89%20%EC%9E%90%EA%B2%A9.png",
-                            "fixedRatio" : True,
-                            "width": 800,
-                            "height": 800
-                        },
-                        
+        responseBody = {
+            "version": "2.0",
+            "template": {
+                "outputs": [
+                    {
+            
+                        "basicCard": {
+                            "title": "귀하의 총합은 : {0}점 입니다.".format(result),
+                                # format매서드를 써서 변수값을 출력 가능하게 해준다.
+                            "description": "조건1의 점수는 : {0} \n조건2의 점수는 : {1}\n조건3의 점수는 : {2}".format(score_end1,score_end2,score_end3),
+                            "thumbnail": {
+                                "imageUrl": "https://raw.githubusercontent.com/JungBear/human-chatbot-subscription/main/image/%EC%9D%BC%EB%B0%98%EA%B3%B5%EA%B8%89%20%EC%9E%90%EA%B2%A9.png",
+                                "fixedRatio" : True,
+                                "width": 800,
+                                "height": 800
+                            }
+                        }
                     }
-                }
-            ]
+                ]
+            }
         }
-    }
             
     return responseBody
     
