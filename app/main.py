@@ -620,3 +620,291 @@ def level():
 
     return jsonify(response)
 
+# 메인 시작블럭
+@app.route('/main', methods=['POST'])
+def Message():
+
+    content = request.get_json()
+    print(content)
+
+    dataSend = {
+    "version": "2.0",
+    "template": {
+        "outputs": [
+        {
+            "carousel": {
+            "type": "basicCard",
+            "items": [
+                {
+                    "title": "현재 진행중인 공고",
+                    "thumbnail": {
+                        "imageUrl": "https://raw.githubusercontent.com/JungBear/human-chatbot-subscription/main/image/%EC%B2%AD%EC%95%BD%EA%B3%B5%EA%B3%A0.png",
+                        "fixedRatio": True,
+                        "width": 378,
+                        "height": 378
+                    },
+                    "buttons": [
+                        {
+                        "action": "block",
+                        "blockId": "62fde9759a43ea1c82652cfb",
+                        "label": "공고(수도권)",
+                        }
+                    ]
+                },
+                {
+                    "title": "청약 유형별 정보",
+                    "thumbnail": {
+                        "imageUrl": "https://raw.githubusercontent.com/JungBear/human-chatbot-subscription/main/image/%EC%B2%AD%EC%95%BD%20%EC%9C%A0%ED%98%95%EB%B3%84%20%EC%A0%95%EB%B3%B4.png",
+                        "fixedRatio": True,
+                        "width": 378,
+                        "height": 378
+                    },
+                    "buttons": [
+                        {
+                        "action": "block",
+                        "blockId": "62fc9e109a43ea1c8265146f",
+                        "label": "공공분양",
+                        
+                        },
+                        {
+                        "action": "block",
+                        "blockId": "62f5eb7278a1fc2ba5b25b9b",
+                        "label": "민간분양",
+                        }
+                        ]
+                        }
+                    ]
+                }
+        }
+            ]
+        }
+    }
+    return jsonify(dataSend)
+
+
+
+
+# 민간 분양유형
+@app.route('/private', methods=['POST'])
+def private():
+
+    content = request.get_json()
+    print(content)
+    content1= content['userRequest']['block']
+    print(content1)
+    
+    dataSend = {
+        "version": "2.0",
+        "template": {
+            "outputs": [
+                {
+                    "basicCard": 
+                    {
+                        "title": "알고 싶으신 민간분양 유형을 눌러주세요.",
+                        "buttons": [
+                    {
+                        "action": "block",
+                        "label": "일반공급",
+                        "blockId": "62f5ccd1f534cf44c78eaf29"
+                    },
+                    {
+                        "action": "block",
+                        "label": "특별공급",
+                        "blockId": "62f5eb9070055f434dcd0a04"
+                    },
+                    {
+                        "action": "block",
+                        "label": "우선공급",
+                        "blockId": "62f5ebc370055f434dcd0a0b"
+                    }
+                        ]
+                    }
+                }
+                    
+                ]
+            }
+        }
+    
+
+    return jsonify(dataSend)
+
+
+# 민간 - 특별
+@app.route('/private/special', methods=['POST'])
+def private2():
+
+    content = request.get_json()
+    print(content)
+    content1= content['userRequest']['block']
+    print(content1)
+
+    dataSend = {
+    "version": "2.0",
+    "template": {
+        "outputs": [
+        {
+            "carousel": {
+            "type": "basicCard",
+            "items": [
+                {
+                    "title": "신혼부부 특별공급",
+                    "thumbnail": {
+                        "imageUrl": "https://raw.githubusercontent.com/JungBear/human-chatbot-subscription/main/image/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C9.PNG",
+                        "fixedRatio": True,
+                        "width": 378,
+                        "height": 378
+                    },
+                    "buttons": [
+                        {
+                        "action": "webLink",
+                        "webLinkUrl": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=873&ccfNo=2&cciNo=4&cnpClsNo=1&search_put=",
+                        "label": "정보",
+                        }
+                    ]
+                },
+                {
+                    "title": "생애최초 특별공급",
+                    "thumbnail": {
+                        "imageUrl": "https://raw.githubusercontent.com/JungBear/human-chatbot-subscription/main/image/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C10.PNG",
+                        "fixedRatio": True,
+                        "width": 378,
+                        "height": 378
+                    },
+                    "buttons": [
+                        {
+                        "action": "webLink",
+                        "webLinkUrl": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=873&ccfNo=2&cciNo=4&cnpClsNo=2&search_put=",
+                        "label": "정보",
+                        }
+                    ]
+                },
+                {
+                    "title": "다자녀가구 특별공급",
+                    "thumbnail": {
+                        "imageUrl": "https://raw.githubusercontent.com/JungBear/human-chatbot-subscription/main/image/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C11.PNG",
+                        "fixedRatio": True,
+                        "width": 378,
+                        "height": 378
+                    },
+                    "buttons": [
+                        {
+                        "action": "webLink",
+                        "webLinkUrl": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=873&ccfNo=2&cciNo=4&cnpClsNo=1&search_put=",
+                        "label": "정보",
+                        }
+                    ]
+                },
+                {
+                    "title": "노부모부양 특별공급",
+                    "thumbnail": {
+                        "imageUrl": "https://raw.githubusercontent.com/JungBear/human-chatbot-subscription/main/image/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C12.PNG",
+                        "fixedRatio": True,
+                        "width": 378,
+                        "height": 378
+                    },
+                    "buttons": [
+                        {
+                        "action": "webLink",
+                        "webLinkUrl": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=873&ccfNo=2&cciNo=4&cnpClsNo=1&search_put=",
+                        "label": "정보",
+                        }
+                    ]
+                },
+                {
+                    "title": "기관추천 특별공급",
+                    "thumbnail": {
+                        "imageUrl": "https://raw.githubusercontent.com/JungBear/human-chatbot-subscription/main/image/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C13.PNG",
+                        "fixedRatio": True,
+                        "width": 378,
+                        "height": 378
+                    },
+                    "buttons": [
+                        {
+                        "action": "webLink",
+                        "webLinkUrl": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=873&ccfNo=2&cciNo=4&cnpClsNo=3&search_put=",
+                        "label": "정보",
+                        }
+                    ]
+                }
+            ]
+        }
+        }
+        ]
+    }
+    }
+    return jsonify(dataSend)
+
+# 민간 - 우선공급 스킬
+@app.route('/private/priority', methods=['POST'])
+def private3():
+
+    content = request.get_json()
+    print(content)
+    content1= content['userRequest']['block']
+    print(content1)
+
+    dataSend = {
+    "version": "2.0",
+    "template": {
+        "outputs": [
+        {
+            "carousel": {
+            "type": "basicCard",
+            "items": [
+                {
+                    "title": "대규모택지 개발지구 우선공급",
+                    "thumbnail": {
+                        "imageUrl": "https://raw.githubusercontent.com/JungBear/human-chatbot-subscription/main/image/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C14.PNG",
+                        "fixedRatio": True,
+                        "width": 378,
+                        "height": 378
+                    },
+                    "buttons": [
+                        {
+                        "action": "webLink",
+                        "webLinkUrl": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=873&ccfNo=2&cciNo=3&cnpClsNo=1&search_put=",
+                        "label": "정보",
+                        }
+                    ]
+                },
+                {
+                    "title": "임대사업자 우선공급",
+                    "thumbnail": {
+                        "imageUrl": "https://raw.githubusercontent.com/JungBear/human-chatbot-subscription/main/image/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C15.PNG",
+                        "fixedRatio": True,
+                        "width": 378,
+                        "height": 378
+                    },
+                    "buttons": [
+                        {
+                        "action": "webLink",
+                        "webLinkUrl": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=873&ccfNo=2&cciNo=3&cnpClsNo=1&search_put=",
+                        "label": "정보",
+                        }
+                    ]
+                },
+                {
+                    "title": "주상복합 건축물의 건설부지 소유자 특별공급",
+                    "thumbnail": {
+                        "imageUrl": "https://raw.githubusercontent.com/JungBear/human-chatbot-subscription/main/image/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C16.PNG",
+                        "fixedRatio": True,
+                        "width": 378,
+                        "height": 378
+                    },
+                    "buttons": [
+                        {
+                        "action": "webLink",
+                        "webLinkUrl": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=873&ccfNo=2&cciNo=3&cnpClsNo=1&search_put=",
+                        "label": "정보",
+                        }
+                    ]
+                },
+            ]
+        }
+        }
+        ]
+    }
+    }
+    return jsonify(dataSend)
+
+
