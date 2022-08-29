@@ -365,7 +365,7 @@ def normal():
                         "title": "공공분양 일반공급", # basic 카드에 들어갈 제목
                         "description": "신청자격 표입니다", # 제목 아래에 들어갈 상세 내용
                         "thumbnail": {
-                            "imageUrl": "https://raw.githubusercontent.com/kimsunhyung/heroku-postgres-son/5d03ff5ee64210755f0baf97eddf3a259c1245ef/data/simple/%EC%9D%BC%EB%B0%98%EA%B3%B5%EA%B8%89%20%EC%9E%90%EA%B2%A9.png",
+                            "imageUrl": "https://raw.githubusercontent.com/JungBear/human-chatbot-subscription/main/image/%EC%9D%BC%EB%B0%98%EA%B3%B5%EA%B8%89%20%EC%9E%90%EA%B2%A9.png",
                             "fixedRatio" : True,
                             "width": 800,
                             "height": 800
@@ -402,7 +402,7 @@ def special():
                                 "title": "",
                                 "description": "",
                                 "thumbnail": {
-                                    "imageUrl": "https://raw.githubusercontent.com/kimsunhyung/heroku-postgres-son/main/data/simple/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C1.PNG",
+                                    "imageUrl": "https://raw.githubusercontent.com/JungBear/human-chatbot-subscription/main/image/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C1.PNG",
                                     "fixedRatio" : True,
                                     "width": 800,
                                     "height": 800
@@ -420,7 +420,7 @@ def special():
                                 "title": "",
                                 "description": "",
                                 "thumbnail": {
-                                    "imageUrl": "https://raw.githubusercontent.com/kimsunhyung/heroku-postgres-son/main/data/simple/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C2.PNG",
+                                    "imageUrl": "https://raw.githubusercontent.com/JungBear/human-chatbot-subscription/main/image/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C2.PNG",
                                     "fixedRatio" : True,
                                     "width": 800,
                                     "height": 800
@@ -437,7 +437,7 @@ def special():
                                 "title": "",
                                 "description": "",
                                 "thumbnail": {
-                                    "imageUrl": "https://raw.githubusercontent.com/kimsunhyung/heroku-postgres-son/main/data/simple/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C3.PNG",
+                                    "imageUrl": "https://raw.githubusercontent.com/JungBear/human-chatbot-subscription/main/image/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C3.PNG",
                                     "fixedRatio" : True,
                                     "width": 800,
                                     "height": 800
@@ -455,7 +455,7 @@ def special():
                                 "title": "",
                                 "description": "",
                                 "thumbnail": {
-                                    "imageUrl": "https://raw.githubusercontent.com/kimsunhyung/heroku-postgres-son/main/data/simple/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C4.PNG",
+                                    "imageUrl": "https://raw.githubusercontent.com/JungBear/human-chatbot-subscription/main/image/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C4.PNG",
                                     "fixedRatio" : True,
                                     "width": 800,
                                     "height": 800
@@ -472,7 +472,7 @@ def special():
                                 "title": "",
                                 "description": "",
                                 "thumbnail": {
-                                    "imageUrl": "https://raw.githubusercontent.com/kimsunhyung/heroku-postgres-son/main/data/simple/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C5.PNG",
+                                    "imageUrl": "https://raw.githubusercontent.com/JungBear/human-chatbot-subscription/main/image/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C5.PNG",
                                     "fixedRatio" : True,
                                     "width": 800,
                                     "height": 800
@@ -512,7 +512,7 @@ def first():
                                 "title": "",
                                 "description": "",
                                 "thumbnail": {
-                                    "imageUrl": "https://raw.githubusercontent.com/kimsunhyung/heroku-postgres-son/main/data/image/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C6.PNG",
+                                    "imageUrl": "https://raw.githubusercontent.com/JungBear/human-chatbot-subscription/main/image/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C6.PNG",
                                     "fixedRatio" : True,
                                     "width": 800,
                                     "height": 800
@@ -530,7 +530,7 @@ def first():
                                 "title": "",
                                 "description": "",
                                 "thumbnail": {
-                                    "imageUrl": "https://raw.githubusercontent.com/kimsunhyung/heroku-postgres-son/main/data/image/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C7.PNG",
+                                    "imageUrl": "https://raw.githubusercontent.com/JungBear/human-chatbot-subscription/main/image/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C7.PNG",
                                     "fixedRatio" : True,
                                     "width": 800,
                                     "height": 800
@@ -547,7 +547,7 @@ def first():
                                 "title": "",
                                 "description": "",
                                 "thumbnail": {
-                                    "imageUrl": "https://raw.githubusercontent.com/kimsunhyung/heroku-postgres-son/main/data/image/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C8.PNG",
+                                    "imageUrl": "https://raw.githubusercontent.com/JungBear/human-chatbot-subscription/main/image/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C8.PNG",
                                     "fixedRatio" : True,
                                     "width": 800,
                                     "height": 800
@@ -588,7 +588,7 @@ def level():
                                 "title": "1순위 요건입니다.",
                                 "description": "그 외 2순위는 추첨입니다.",
                                 "thumbnail": {
-                                    "imageUrl": "https://raw.githubusercontent.com/kimsunhyung/heroku-postgres-son/82c3397802efe9d294b5c859b77ebeee36411af5/data/image/1%EC%88%9C%EC%9C%84%20%EC%9A%94%EA%B1%B4.png",
+                                    "imageUrl": "https://raw.githubusercontent.com/JungBear/human-chatbot-subscription/main/image/1%EC%88%9C%EC%9C%84%20%EC%9A%94%EA%B1%B4.png",
                                     "fixedRatio" : True,
                                     "width": 800,
                                     "height": 800
@@ -598,7 +598,7 @@ def level():
                                 "title": "",
                                 "description": "동일 순위 시 경쟁 요건표 입니다.",
                                 "thumbnail": {
-                                    "imageUrl": "https://raw.githubusercontent.com/kimsunhyung/heroku-postgres-son/82c3397802efe9d294b5c859b77ebeee36411af5/data/image/%EB%8F%99%EC%9D%BC%20%EC%88%9C%EC%9C%84%20%EA%B2%BD%EC%9F%81.png",
+                                    "imageUrl": "https://raw.githubusercontent.com/JungBear/human-chatbot-subscription/main/image/%EB%8F%99%EC%9D%BC%20%EC%88%9C%EC%9C%84%20%EA%B2%BD%EC%9F%81.png",
                                     "fixedRatio" : True,
                                     "width": 800,
                                     "height": 800
@@ -619,3 +619,4 @@ def level():
     }
 
     return jsonify(response)
+
