@@ -300,9 +300,10 @@ def score():
             "outputs": [
                 {
                     "basicCard": {
-                        "title": '조건1의 점수는 : {0} \n조건2의 점수는 : {1}\n조건3의 점수는 : {2}\n총합은 : {3}점 입니다.'.format(score_end1, score_end2, score_end3, result),
+                        "title": '귀하의 총합은 : {}점 입니다.'.format(score_end1, score_end2, score_end3, result),
                         # format매서드를 써서 변수값을 출력 가능하게 해준다.
                         # {0}=score_end1, {1}=score_end2, {2}=score_end3, {3}=result
+                        "description": '조건1의 점수는 : {0} \n조건2의 점수는 : {1}\n조건3의 점수는 : {2}'.format(score_end1,score_end2,score_end3)
                         "thumbnail": {
                             "imageUrl": "https://raw.githubusercontent.com/JungBear/human-chatbot-subscription/main/image/%EB%AF%BC%EA%B0%84%EB%B6%84%EC%96%91%20%EA%B0%80%EC%A0%90%EC%A0%9C%EC%B6%94%EC%B2%A8%EC%A0%9C.png",
                             "fixedRatio": True,
