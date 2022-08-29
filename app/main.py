@@ -656,8 +656,8 @@ def Message():
                     "thumbnail": {
                         "imageUrl": "https://raw.githubusercontent.com/JungBear/human-chatbot-subscription/main/image/%EC%B2%AD%EC%95%BD%20%EC%9C%A0%ED%98%95%EB%B3%84%20%EC%A0%95%EB%B3%B4.png",
                         "fixedRatio": True,
-                        "width": 378,
-                        "height": 378
+                        "width": 800,
+                        "height": 800
                     },
                     "buttons": [
                         {
@@ -699,7 +699,7 @@ def private():
             "outputs": [
                 {
                     "basicCard": {
-                        "title": "공공분양", # basic 카드에 들어갈 제목
+                        "title": "민간분양", # basic 카드에 들어갈 제목
                         "description": "궁금하신 분양유형을 눌러주세요", # 제목 아래에 들어갈 상세 내용
                         "buttons": [ # basic 카드에 소속된 버튼 
                     {
@@ -921,8 +921,9 @@ def qwerasdf():
                         "title": "민간분양 일반공급 유형",
                         "thumbnail": {
                             "imageUrl": "https://raw.githubusercontent.com/JungBear/human-chatbot-subscription/main/image/%EB%AF%BC%EA%B0%84%20%EC%9D%BC%EB%B0%98.png",
-                            "width": 1200,
-                            "height": 1200
+                            "fixedRatio": True,
+                            "width": 800,
+                            "height": 800
                         },
                         "buttons": [
                             {
@@ -951,8 +952,9 @@ def qwerasdfd():
                     "basicCard": {
                         "thumbnail": {
                             "imageUrl": "https://raw.githubusercontent.com/JungBear/human-chatbot-subscription/main/image/%EA%B0%80%EC%A0%90%ED%91%9C.png",
-                            "width": 1200,
-                            "height": 1200
+                            "fixedRatio": True,
+                            "width": 800,
+                            "height": 800
                         },
                         "buttons": [
                             {
