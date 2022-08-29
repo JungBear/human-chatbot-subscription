@@ -920,7 +920,7 @@ def qwerasdf():
                     "basicCard": {
                         "title": "민간분양 일반공급 유형",
                         "thumbnail": {
-                            "imageUrl": "https://raw.githubusercontent.com/bryancha-ui/chatbot-project-hjcha/main/app/image/KakaoTalk_regular.png",
+                            "imageUrl": "https://raw.githubusercontent.com/JungBear/human-chatbot-subscription/main/image/%EB%AF%BC%EA%B0%84%20%EC%9D%BC%EB%B0%98.png",
                             "width": 1200,
                             "height": 1200
                         },
@@ -950,7 +950,7 @@ def qwerasdfd():
                 {
                     "basicCard": {
                         "thumbnail": {
-                            "imageUrl": "https://raw.githubusercontent.com/bryancha-ui/chatbot-project-hjcha/main/app/image/KakaoTalk_point.png",
+                            "imageUrl": "https://raw.githubusercontent.com/JungBear/human-chatbot-subscription/main/image/%EA%B0%80%EC%A0%90%ED%91%9C.png",
                             "width": 1200,
                             "height": 1200
                         },
