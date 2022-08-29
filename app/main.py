@@ -399,7 +399,7 @@ def special():
                         "type": "basicCard",
                         "items": [
                             {
-                                "title": "",
+                                "title": "신혼부부 특별공급",
                                 "description": "",
                                 "thumbnail": {
                                     "imageUrl": "https://raw.githubusercontent.com/JungBear/human-chatbot-subscription/main/image/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C1.PNG",
@@ -417,7 +417,7 @@ def special():
                                 ]
                             },
                             {
-                                "title": "",
+                                "title": "생애최초 특별공급",
                                 "description": "",
                                 "thumbnail": {
                                     "imageUrl": "https://raw.githubusercontent.com/JungBear/human-chatbot-subscription/main/image/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C2.PNG",
@@ -434,7 +434,7 @@ def special():
                                 ]
                             },
                             {
-                                "title": "",
+                                "title": "다자녀가구 특별공급",
                                 "description": "",
                                 "thumbnail": {
                                     "imageUrl": "https://raw.githubusercontent.com/JungBear/human-chatbot-subscription/main/image/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C3.PNG",
@@ -452,7 +452,7 @@ def special():
                                 ]
                             },
                             {
-                                "title": "",
+                                "title": "노부모부양 특별공급",
                                 "description": "",
                                 "thumbnail": {
                                     "imageUrl": "https://raw.githubusercontent.com/JungBear/human-chatbot-subscription/main/image/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C4.PNG",
@@ -469,7 +469,7 @@ def special():
                                 ]
                             },
                             {
-                                "title": "",
+                                "title": "기관추천 특별공급",
                                 "description": "",
                                 "thumbnail": {
                                     "imageUrl": "https://raw.githubusercontent.com/JungBear/human-chatbot-subscription/main/image/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C5.PNG",
@@ -509,7 +509,7 @@ def first():
                         "type": "basicCard",
                         "items": [
                             {
-                                "title": "",
+                                "title": "직장 주택 조합 우선공급",
                                 "description": "",
                                 "thumbnail": {
                                     "imageUrl": "https://raw.githubusercontent.com/JungBear/human-chatbot-subscription/main/image/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C6.PNG",
@@ -527,7 +527,7 @@ def first():
                                 ]
                             },
                             {
-                                "title": "",
+                                "title": "주상복합 건축물의 건설부지 소유자 우선공급",
                                 "description": "",
                                 "thumbnail": {
                                     "imageUrl": "https://raw.githubusercontent.com/JungBear/human-chatbot-subscription/main/image/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C7.PNG",
@@ -544,7 +544,7 @@ def first():
                                 ]
                             },
                             {
-                                "title": "",
+                                "title": "대규모 택지 개발지구 우선공급",
                                 "description": "",
                                 "thumbnail": {
                                     "imageUrl": "https://raw.githubusercontent.com/JungBear/human-chatbot-subscription/main/image/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C8.PNG",
@@ -652,7 +652,7 @@ def Message():
                     ]
                 },
                 {
-                    "title": "청약 유형별 정보",
+                    "title": "청약 유형별 자세히보기",
                     "thumbnail": {
                         "imageUrl": "https://raw.githubusercontent.com/JungBear/human-chatbot-subscription/main/image/%EC%B2%AD%EC%95%BD%20%EC%9C%A0%ED%98%95%EB%B3%84%20%EC%A0%95%EB%B3%B4.png",
                         "fixedRatio": True,
@@ -698,10 +698,10 @@ def private():
         "template": {
             "outputs": [
                 {
-                    "basicCard": 
-                    {
-                        "title": "알고 싶으신 민간분양 유형을 눌러주세요.",
-                        "buttons": [
+                    "basicCard": {
+                        "title": "공공분양", # basic 카드에 들어갈 제목
+                        "description": "궁금하신 분양유형을 눌러주세요", # 제목 아래에 들어갈 상세 내용
+                        "buttons": [ # basic 카드에 소속된 버튼 
                     {
                         "action": "block",
                         "label": "일반공급",
@@ -758,7 +758,7 @@ def private2():
                         {
                         "action": "webLink",
                         "webLinkUrl": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=873&ccfNo=2&cciNo=4&cnpClsNo=1&search_put=",
-                        "label": "정보",
+                        "label": "자세히보기",
                         }
                     ]
                 },
@@ -774,7 +774,7 @@ def private2():
                         {
                         "action": "webLink",
                         "webLinkUrl": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=873&ccfNo=2&cciNo=4&cnpClsNo=2&search_put=",
-                        "label": "정보",
+                        "label": "자세히보기",
                         }
                     ]
                 },
@@ -790,7 +790,7 @@ def private2():
                         {
                         "action": "webLink",
                         "webLinkUrl": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=873&ccfNo=2&cciNo=4&cnpClsNo=1&search_put=",
-                        "label": "정보",
+                        "label": "자세히보기",
                         }
                     ]
                 },
@@ -806,7 +806,7 @@ def private2():
                         {
                         "action": "webLink",
                         "webLinkUrl": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=873&ccfNo=2&cciNo=4&cnpClsNo=1&search_put=",
-                        "label": "정보",
+                        "label": "자세히보기",
                         }
                     ]
                 },
@@ -822,7 +822,7 @@ def private2():
                         {
                         "action": "webLink",
                         "webLinkUrl": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=873&ccfNo=2&cciNo=4&cnpClsNo=3&search_put=",
-                        "label": "정보",
+                        "label": "자세히보기",
                         }
                     ]
                 }
@@ -863,7 +863,7 @@ def private3():
                         {
                         "action": "webLink",
                         "webLinkUrl": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=873&ccfNo=2&cciNo=3&cnpClsNo=1&search_put=",
-                        "label": "정보",
+                        "label": "자세히보기",
                         }
                     ]
                 },
@@ -879,7 +879,7 @@ def private3():
                         {
                         "action": "webLink",
                         "webLinkUrl": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=873&ccfNo=2&cciNo=3&cnpClsNo=1&search_put=",
-                        "label": "정보",
+                        "label": "자세히보기",
                         }
                     ]
                 },
@@ -895,7 +895,7 @@ def private3():
                         {
                         "action": "webLink",
                         "webLinkUrl": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=873&ccfNo=2&cciNo=3&cnpClsNo=1&search_put=",
-                        "label": "정보",
+                        "label": "자세히보기",
                         }
                     ]
                 },
