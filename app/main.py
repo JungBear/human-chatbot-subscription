@@ -294,21 +294,28 @@ def score():
         }
     else:
     # 에러가 나지 않았을 경우 실행
-        responseBody = {
-            "version": "2.0",
-            "template": {
-                "outputs": [
-                    {
-                        "simpleText": {
-                            "text": '조건1의 점수는 : {0} \n조건2의 점수는 : {1}\n조건3의 점수는 : {2}\n총합은 : {3}점 입니다.'.format(score_end1, score_end2, score_end3, result)
-                            # format매서드를 써서 변수값을 출력 가능하게 해준다.
-                            # {0}=score_end1, {1}=score_end2, {2}=score_end3, {3}=result
+        responseBody = response = {
+        "version": "2.0",
+        "template": {
+            "outputs": [
+                {
+                    "basicCard": {
+                        "title": '조건1의 점수는 : {0} \n조건2의 점수는 : {1}\n조건3의 점수는 : {2}\n총합은 : {3}점 입니다.'.format(score_end1, score_end2, score_end3, result),
+                        # format매서드를 써서 변수값을 출력 가능하게 해준다.
+                        # {0}=score_end1, {1}=score_end2, {2}=score_end3, {3}=result
+                        "thumbnail": {
+                            "imageUrl": "https://raw.githubusercontent.com/JungBear/human-chatbot-subscription/main/image/%EB%AF%BC%EA%B0%84%EB%B6%84%EC%96%91%20%EA%B0%80%EC%A0%90%EC%A0%9C%EC%B6%94%EC%B2%A8%EC%A0%9C.png",
+                            "fixedRatio": True,
+                            "width": 800,
+                            "height": 800
                         }
                     }
-                ]
-            }
+                }
+            ]
         }
+    }
     return responseBody
+    
 
 # 공공분양에서 분류 나누기
 @app.route("/public", methods = ['post'])
@@ -929,7 +936,7 @@ def qwerasdf():
                             {
                                 "action": "block",
                                 "label": "순위요건",
-                                "blockId": "62f5df6f70055f434dcd05ed"
+                                "blockId": "630c1df50ed3e074370a589a"
                             }
                         ]
                     },
