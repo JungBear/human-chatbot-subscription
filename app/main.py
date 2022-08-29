@@ -907,4 +907,63 @@ def private3():
     }
     return jsonify(dataSend)
 
+# 민간-일반
+@app.route("/private/normal", methods = ['POST'])
+def qwerasdf():
+    req = request.get_json()
+    print(req)
+    response = {
+        "version": "2.0",
+        "template": {
+            "outputs": [
+                {
+                    "basicCard": {
+                        "title": "민간분양 일반공급 유형",
+                        "thumbnail": {
+                            "imageUrl": "https://raw.githubusercontent.com/bryancha-ui/chatbot-project-hjcha/main/app/image/KakaoTalk_regular.png",
+                            "width": 1200,
+                            "height": 1200
+                        },
+                        "buttons": [
+                            {
+                                "action": "block",
+                                "label": "순위요건",
+                                "blockId": "62f5df6f70055f434dcd05ed"
+                            }
+                        ]
+                    },
+                }
+            ]
+        }
+    }
+    return response
 
+# 민간-일반-가점표
+@app.route("/private/add", methods = ['POST'])
+def qwerasdfd():
+    req = request.get_json()
+    print(req)
+    response = {
+        "version": "2.0",
+        "template": {
+            "outputs": [
+                {
+                    "basicCard": {
+                        "thumbnail": {
+                            "imageUrl": "https://raw.githubusercontent.com/bryancha-ui/chatbot-project-hjcha/main/app/image/KakaoTalk_point.png",
+                            "width": 1200,
+                            "height": 1200
+                        },
+                        "buttons": [
+                            {
+                                "action": "block",
+                                "label": "가점제 점수계산표",
+                                "blockId": "62fcf4c58a1240569898cd10"
+                            }
+                        ]
+                    },
+                }
+            ]
+        }
+    }
+    return 
