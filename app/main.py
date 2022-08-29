@@ -305,7 +305,7 @@ def score():
                                 # format매서드를 써서 변수값을 출력 가능하게 해준다.
                             "description": "조건1의 점수는 : {0} \n조건2의 점수는 : {1}\n조건3의 점수는 : {2}".format(score_end1,score_end2,score_end3),
                             "thumbnail": {
-                                "imageUrl": "https://raw.githubusercontent.com/JungBear/human-chatbot-subscription/main/image/%EC%9D%BC%EB%B0%98%EA%B3%B5%EA%B8%89%20%EC%9E%90%EA%B2%A9.png",
+                                "imageUrl": "https://raw.githubusercontent.com/JungBear/human-chatbot-subscription/main/image/%EB%AF%BC%EA%B0%84%EB%B6%84%EC%96%91%20%EA%B0%80%EC%A0%90%EC%A0%9C%EC%B6%94%EC%B2%A8%EC%A0%9C.png",
                                 "fixedRatio" : True,
                                 "width": 800,
                                 "height": 800
