@@ -421,7 +421,7 @@ def special():
                                     {
                                         "action": "webLink",
                                         "label": "자세히보기",
-                                        "webLinkUrl": "https://easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=873&ccfNo=2&cciNo=4&cnpClsNo=1&search_put="
+                                        "webLinkUrl": "https://human-self-url.herokuapp.com/public_special_married/"
                                     },
                                 ]
                             },
@@ -438,7 +438,7 @@ def special():
                                     {
                                         "action": "webLink",
                                         "label": "자세히보기",
-                                        "webLinkUrl": "https://easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=873&ccfNo=2&cciNo=4&cnpClsNo=2&search_put="
+                                        "webLinkUrl": "https://human-self-url.herokuapp.com/public_special_first/"
                                     },
                                 ]
                             },
@@ -455,7 +455,7 @@ def special():
                                     {
                                         "action": "webLink",
                                         "label": "자세히보기",
-                                        "webLinkUrl": "https://easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=873&ccfNo=2&cciNo=4&cnpClsNo=1&search_put="
+                                        "webLinkUrl": "https://human-self-url.herokuapp.com/public_special_multiple/"
                                     },
                         
                                 ]
@@ -473,7 +473,7 @@ def special():
                                     {
                                         "action": "webLink",
                                         "label": "자세히보기",
-                                        "webLinkUrl": "https://easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=873&ccfNo=2&cciNo=4&cnpClsNo=1&search_put="
+                                        "webLinkUrl": "https://human-self-url.herokuapp.com/public_special_parents/"
                                     },
                                 ]
                             },
@@ -490,7 +490,7 @@ def special():
                                     {
                                         "action": "webLink",
                                         "label": "자세히보기",
-                                        "webLinkUrl": "https://easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=873&ccfNo=2&cciNo=4&cnpClsNo=2&search_put="
+                                        "webLinkUrl": "https://human-self-url.herokuapp.com/public_special_institution/"
                                     },
                                 ]   
                             }
@@ -531,7 +531,7 @@ def first():
                                     {
                                         "action": "webLink",
                                         "label": "자세히보기",
-                                        "webLinkUrl": "https://easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=873&ccfNo=2&cciNo=3&cnpClsNo=1&search_put="
+                                        "webLinkUrl": "https://human-self-url.herokuapp.com/public_priority_job/"
                                     },
                                 ]
                             },
@@ -548,7 +548,7 @@ def first():
                                     {
                                         "action": "webLink",
                                         "label": "자세히보기",
-                                        "webLinkUrl": "https://easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=873&ccfNo=2&cciNo=3&cnpClsNo=1&search_put="
+                                        "webLinkUrl": "https://human-self-url.herokuapp.com/public_priority_complex/"
                                     },
                                 ]
                             },
@@ -565,7 +565,7 @@ def first():
                                     {
                                         "action": "webLink",
                                         "label": "자세히보기",
-                                        "webLinkUrl": "https://easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=873&ccfNo=2&cciNo=3&cnpClsNo=1&search_put="
+                                        "webLinkUrl": "https://human-self-url.herokuapp.com/public_priority_large/"
                                     },
                         
                                 ]
@@ -616,7 +616,7 @@ def level():
                                     {
                                         "action": "webLink",
                                         "label": "자세히보기",
-                                        "webLinkUrl": "https://www.law.go.kr/LSW/LsiJoLinkP.do?joNo=002700000&languageType=KO&docType=JO&lsNm=%EC%A3%BC%ED%83%9D%EA%B3%B5%EA%B8%89%EC%97%90+%EA%B4%80%ED%95%9C+%EA%B7%9C%EC%B9%99&paras=1#"
+                                        "webLinkUrl": "https://human-self-url.herokuapp.com/public_normal/"
                                     },
                                 ]
                             },
@@ -766,7 +766,7 @@ def private2():
                     "buttons": [
                         {
                         "action": "webLink",
-                        "webLinkUrl": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=873&ccfNo=2&cciNo=4&cnpClsNo=1&search_put=",
+                        "webLinkUrl": "https://human-self-url.herokuapp.com/private_special_married/",
                         "label": "자세히보기",
                         }
                     ]
@@ -782,7 +782,7 @@ def private2():
                     "buttons": [
                         {
                         "action": "webLink",
-                        "webLinkUrl": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=873&ccfNo=2&cciNo=4&cnpClsNo=2&search_put=",
+                        "webLinkUrl": "https://human-self-url.herokuapp.com/private_special_first/",
                         "label": "자세히보기",
                         }
                     ]
@@ -798,7 +798,7 @@ def private2():
                     "buttons": [
                         {
                         "action": "webLink",
-                        "webLinkUrl": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=873&ccfNo=2&cciNo=4&cnpClsNo=1&search_put=",
+                        "webLinkUrl": "https://human-self-url.herokuapp.com/private_special_multiple/",
                         "label": "자세히보기",
                         }
                     ]
@@ -814,7 +814,7 @@ def private2():
                     "buttons": [
                         {
                         "action": "webLink",
-                        "webLinkUrl": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=873&ccfNo=2&cciNo=4&cnpClsNo=1&search_put=",
+                        "webLinkUrl": "https://human-self-url.herokuapp.com/private_special_parents/",
                         "label": "자세히보기",
                         }
                     ]
@@ -830,7 +830,7 @@ def private2():
                     "buttons": [
                         {
                         "action": "webLink",
-                        "webLinkUrl": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=873&ccfNo=2&cciNo=4&cnpClsNo=3&search_put=",
+                        "webLinkUrl": "https://human-self-url.herokuapp.com/private_special_institution/",
                         "label": "자세히보기",
                         }
                     ]
@@ -871,7 +871,7 @@ def private3():
                     "buttons": [
                         {
                         "action": "webLink",
-                        "webLinkUrl": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=873&ccfNo=2&cciNo=3&cnpClsNo=1&search_put=",
+                        "webLinkUrl": "https://human-self-url.herokuapp.com/private_priority_large/",
                         "label": "자세히보기",
                         }
                     ]
@@ -887,7 +887,7 @@ def private3():
                     "buttons": [
                         {
                         "action": "webLink",
-                        "webLinkUrl": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=873&ccfNo=2&cciNo=3&cnpClsNo=1&search_put=",
+                        "webLinkUrl": "https://human-self-url.herokuapp.com/private_priority_rental/",
                         "label": "자세히보기",
                         }
                     ]
@@ -903,7 +903,7 @@ def private3():
                     "buttons": [
                         {
                         "action": "webLink",
-                        "webLinkUrl": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=873&ccfNo=2&cciNo=3&cnpClsNo=1&search_put=",
+                        "webLinkUrl": "https://human-self-url.herokuapp.com/private_priority_complex/",
                         "label": "자세히보기",
                         }
                     ]
