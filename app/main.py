@@ -11,8 +11,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    database.db_create
-    return "Verson : 136"
+    database.db_create()
+    return "Verson : 137"
 
 # 단순메세지
 @app.route("/api/hello")
