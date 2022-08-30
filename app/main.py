@@ -11,6 +11,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
+    database.db_create
     return "Verson : 112"
 
 # 단순메세지
