@@ -73,7 +73,7 @@ def index():
 
 
 if __name__ == "__main__":
-    
+    db_create()
     area_db()
     score_db1()
     app.run()
